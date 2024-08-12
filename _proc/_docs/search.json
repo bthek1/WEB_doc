@@ -1930,116 +1930,6 @@
     ]
   },
   {
-    "objectID": "git.html",
-    "href": "git.html",
-    "title": "GIT",
-    "section": "",
-    "text": "!git -h\n\nunknown option: -h\nusage: git [--version] [--help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]\n           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]\n           [--super-prefix=&lt;path&gt;] [--config-env=&lt;name&gt;=&lt;envvar&gt;]\n           &lt;command&gt; [&lt;args&gt;]",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#git-files",
-    "href": "git.html#git-files",
-    "title": "GIT",
-    "section": "Git Files",
-    "text": "Git Files\n.git : main file managing git stuff\n.gitignore : list of files and files types to ignore\n.github : git hub automation",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#install",
-    "href": "git.html#install",
-    "title": "GIT",
-    "section": "Install",
-    "text": "Install\nsudo apt install git",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#configure-git",
-    "href": "git.html#configure-git",
-    "title": "GIT",
-    "section": "Configure Git",
-    "text": "Configure Git\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\"",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#creating-new-repo",
-    "href": "git.html#creating-new-repo",
-    "title": "GIT",
-    "section": "Creating New Repo",
-    "text": "Creating New Repo\n\nOption 1: Create repo in Github and clone it\ngit clone &lt;ssh url&gt;\n\n\nOption 2: Create a Git repository locally\ngit init\n\nOptional\n\ngit branch -m main\n\nAdd and commit files\ngit add . \ngit commit -m \"Your commit message\"\n\n\nSet up a remote repository\ngit remote add &lt;name&gt; &lt;url&gt;\nExample:\ngit remote add origin your_remote_repository_url\n\n\nSync\ngit branch --set-upstream-to=&lt;remote name&gt;/&lt;remote branch&gt; &lt;local branch&gt;\n\nExample\n\ngit branch --set-upstream-to=origin/main master\n\nsync\n\ngit pull\n\n\nPush changes to remote\ngit push\n\n\nVerify remote connection\ngit remote -v",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#basic-commands",
-    "href": "git.html#basic-commands",
-    "title": "GIT",
-    "section": "Basic Commands",
-    "text": "Basic Commands\n\nChecking git status\ngit status\n\n\nAdding files to git repo\ngit add &lt;filenames&gt; \nFor adding all the files in the folder\ngit add * \n\n\nCommit it to local repo\ngit commit -m \"&lt;message&gt;\"\n\n\nFor pushing to github\ngit push",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#git-branches",
-    "href": "git.html#git-branches",
-    "title": "GIT",
-    "section": "Git Branches",
-    "text": "Git Branches\n\nFor viewing Braches\n\n!git branch\n\n* main\n\n\n\n\nAdding branches\ngit branch &lt;name&gt;\n\n\nSwitching branches\ngit checkout &lt;branch name&gt;\ncreate branch and move into it\ngit checkout -b &lt;branch name&gt;\n\n\nPush branch to github\ngit push --set-upstream &lt;online branch name&gt; &lt;local branch name&gt;\n\n\nDelete branch\ngit branch -d &lt;branch name&gt;",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#review-history",
-    "href": "git.html#review-history",
-    "title": "GIT",
-    "section": "Review History",
-    "text": "Review History\n\ngit log: Lists version history for the current branch\ngit log --follow [file]: Lists version history for a file, including renames\ngit diff [first-branch]...[second-branch]: Shows content differences between two branches\ngit show [commit]: Outputs metadata and content changes of the specified commit",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#git-forking",
-    "href": "git.html#git-forking",
-    "title": "GIT",
-    "section": "Git Forking",
-    "text": "Git Forking",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
-    "objectID": "git.html#git-submodules",
-    "href": "git.html#git-submodules",
-    "title": "GIT",
-    "section": "Git submodules",
-    "text": "Git submodules",
-    "crumbs": [
-      "Blog",
-      "GIT"
-    ]
-  },
-  {
     "objectID": "pip&git_release.html",
     "href": "pip&git_release.html",
     "title": "PIP and GIT release",
@@ -2104,6 +1994,76 @@
       "Blog",
       "PIP and GIT release"
     ]
+  },
+  {
+    "objectID": "p_git.html",
+    "href": "p_git.html",
+    "title": "GIT",
+    "section": "",
+    "text": "!git -h\n\nunknown option: -h\nusage: git [--version] [--help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]\n           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]\n           [--super-prefix=&lt;path&gt;] [--config-env=&lt;name&gt;=&lt;envvar&gt;]\n           &lt;command&gt; [&lt;args&gt;]"
+  },
+  {
+    "objectID": "p_git.html#git-files",
+    "href": "p_git.html#git-files",
+    "title": "GIT",
+    "section": "Git Files",
+    "text": "Git Files\n.git : main file managing git stuff\n.gitignore : list of files and files types to ignore\n.github : git hub automation"
+  },
+  {
+    "objectID": "p_git.html#install",
+    "href": "p_git.html#install",
+    "title": "GIT",
+    "section": "Install",
+    "text": "Install\nsudo apt install git"
+  },
+  {
+    "objectID": "p_git.html#configure-git",
+    "href": "p_git.html#configure-git",
+    "title": "GIT",
+    "section": "Configure Git",
+    "text": "Configure Git\ngit config --global user.name \"Your Name\"\ngit config --global user.email \"you@example.com\""
+  },
+  {
+    "objectID": "p_git.html#creating-new-repo",
+    "href": "p_git.html#creating-new-repo",
+    "title": "GIT",
+    "section": "Creating New Repo",
+    "text": "Creating New Repo\n\nOption 1: Create repo in Github and clone it\ngit clone &lt;ssh url&gt;\n\n\nOption 2: Create a Git repository locally\ngit init\n\nOptional\n\ngit branch -m main\n\nAdd and commit files\ngit add . \ngit commit -m \"Your commit message\"\n\n\nSet up a remote repository\ngit remote add &lt;name&gt; &lt;url&gt;\nExample:\ngit remote add origin your_remote_repository_url\n\n\nSync\ngit branch --set-upstream-to=&lt;remote name&gt;/&lt;remote branch&gt; &lt;local branch&gt;\n\nExample\n\ngit branch --set-upstream-to=origin/main master\n\nsync\n\ngit pull\n\n\nPush changes to remote\ngit push\n\n\nVerify remote connection\ngit remote -v"
+  },
+  {
+    "objectID": "p_git.html#basic-commands",
+    "href": "p_git.html#basic-commands",
+    "title": "GIT",
+    "section": "Basic Commands",
+    "text": "Basic Commands\n\nChecking git status\ngit status\n\n\nAdding files to git repo\ngit add &lt;filenames&gt; \nFor adding all the files in the folder\ngit add * \n\n\nCommit it to local repo\ngit commit -m \"&lt;message&gt;\"\n\n\nFor pushing to github\ngit push"
+  },
+  {
+    "objectID": "p_git.html#git-branches",
+    "href": "p_git.html#git-branches",
+    "title": "GIT",
+    "section": "Git Branches",
+    "text": "Git Branches\n\nFor viewing Braches\n\n!git branch\n\n* main\n\n\n\n\nAdding branches\ngit branch &lt;name&gt;\n\n\nSwitching branches\ngit checkout &lt;branch name&gt;\ncreate branch and move into it\ngit checkout -b &lt;branch name&gt;\n\n\nPush branch to github\ngit push --set-upstream &lt;online branch name&gt; &lt;local branch name&gt;\n\n\nDelete branch\ngit branch -d &lt;branch name&gt;"
+  },
+  {
+    "objectID": "p_git.html#review-history",
+    "href": "p_git.html#review-history",
+    "title": "GIT",
+    "section": "Review History",
+    "text": "Review History\n\ngit log: Lists version history for the current branch\ngit log --follow [file]: Lists version history for a file, including renames\ngit diff [first-branch]...[second-branch]: Shows content differences between two branches\ngit show [commit]: Outputs metadata and content changes of the specified commit"
+  },
+  {
+    "objectID": "p_git.html#git-forking",
+    "href": "p_git.html#git-forking",
+    "title": "GIT",
+    "section": "Git Forking",
+    "text": "Git Forking"
+  },
+  {
+    "objectID": "p_git.html#git-submodules",
+    "href": "p_git.html#git-submodules",
+    "title": "GIT",
+    "section": "Git submodules",
+    "text": "Git submodules"
   },
   {
     "objectID": "Environments/conda.html",

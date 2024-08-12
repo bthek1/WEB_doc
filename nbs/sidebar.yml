@@ -2,7 +2,6 @@ website:
   sidebar:
     contents:
       - index.ipynb
-      - 01_Git.ipynb
       - 02_Github.ipynb
       - 04_Docker.ipynb
       - 05_PIP&GIT_release.ipynb
@@ -12,6 +11,7 @@ website:
       - 09_Nookal.ipynb
       - 10_Nginx.ipynb
       - 11_Gunicorn.ipynb
+      - p_Git.ipynb
       - section: Back_end
         contents:
           - Back_end/01_Influx.ipynb
