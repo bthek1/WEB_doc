@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Webdevelopment Documentation">
+<meta name="description" content="Git stuff">
 
-<title>webdevelopment_doc - Webdevelopment Documentation</title>
+<title>webdevelopment_doc - GIT</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./git.html" rel="next">
+<link href="./github.html" rel="next">
+<link href="./index.html" rel="prev">
 <link href="./favi.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -107,12 +108,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta property="og:description" content="Webdevelopment Documentation">
+<meta property="og:title" content="webdevelopment_doc - GIT">
+<meta property="og:description" content="Git stuff">
 <meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
 <meta property="og:site_name" content="webdevelopment_doc">
-<meta name="twitter:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta name="twitter:description" content="Webdevelopment Documentation">
+<meta name="twitter:title" content="webdevelopment_doc - GIT">
+<meta name="twitter:description" content="Git stuff">
 <meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Webdevelopment Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./git.html">GIT</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,13 +266,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Webdevelopment Documentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git.html" class="sidebar-item-text sidebar-link">
+  <a href="./git.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">GIT</span></a>
   </div>
 </li>
@@ -679,22 +680,46 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#git-files" id="toc-git-files" class="nav-link active" data-scroll-target="#git-files">Git Files</a></li>
+  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a></li>
+  <li><a href="#configure-git" id="toc-configure-git" class="nav-link" data-scroll-target="#configure-git">Configure Git</a></li>
+  <li><a href="#creating-new-repo" id="toc-creating-new-repo" class="nav-link" data-scroll-target="#creating-new-repo">Creating New Repo</a>
+  <ul class="collapse">
+  <li><a href="#option-1-create-repo-in-github-and-clone-it" id="toc-option-1-create-repo-in-github-and-clone-it" class="nav-link" data-scroll-target="#option-1-create-repo-in-github-and-clone-it">Option 1: Create repo in Github and clone it</a></li>
+  <li><a href="#option-2-create-a-git-repository-locally" id="toc-option-2-create-a-git-repository-locally" class="nav-link" data-scroll-target="#option-2-create-a-git-repository-locally">Option 2: Create a Git repository locally</a></li>
+  </ul></li>
+  <li><a href="#basic-commands" id="toc-basic-commands" class="nav-link" data-scroll-target="#basic-commands">Basic Commands</a>
+  <ul class="collapse">
+  <li><a href="#checking-git-status" id="toc-checking-git-status" class="nav-link" data-scroll-target="#checking-git-status">Checking git status</a></li>
+  <li><a href="#adding-files-to-git-repo" id="toc-adding-files-to-git-repo" class="nav-link" data-scroll-target="#adding-files-to-git-repo">Adding files to git repo</a></li>
+  <li><a href="#commit-it-to-local-repo" id="toc-commit-it-to-local-repo" class="nav-link" data-scroll-target="#commit-it-to-local-repo">Commit it to local repo</a></li>
+  <li><a href="#for-pushing-to-github" id="toc-for-pushing-to-github" class="nav-link" data-scroll-target="#for-pushing-to-github">For pushing to github</a></li>
+  </ul></li>
+  <li><a href="#git-branches" id="toc-git-branches" class="nav-link" data-scroll-target="#git-branches">Git Branches</a>
+  <ul class="collapse">
+  <li><a href="#for-viewing-braches" id="toc-for-viewing-braches" class="nav-link" data-scroll-target="#for-viewing-braches">For viewing Braches</a></li>
+  <li><a href="#adding-branches" id="toc-adding-branches" class="nav-link" data-scroll-target="#adding-branches">Adding branches</a></li>
+  <li><a href="#switching-branches" id="toc-switching-branches" class="nav-link" data-scroll-target="#switching-branches">Switching branches</a></li>
+  <li><a href="#push-branch-to-github" id="toc-push-branch-to-github" class="nav-link" data-scroll-target="#push-branch-to-github">Push branch to github</a></li>
+  <li><a href="#delete-branch" id="toc-delete-branch" class="nav-link" data-scroll-target="#delete-branch">Delete branch</a></li>
+  </ul></li>
+  <li><a href="#review-history" id="toc-review-history" class="nav-link" data-scroll-target="#review-history">Review History</a></li>
+  <li><a href="#git-forking" id="toc-git-forking" class="nav-link" data-scroll-target="#git-forking">Git Forking</a></li>
+  <li><a href="#git-submodules" id="toc-git-submodules" class="nav-link" data-scroll-target="#git-submodules">Git submodules</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/01_Git.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Webdevelopment Documentation</h1>
+<h1 class="title">GIT</h1>
 </div>
 
 <div>
   <div class="description">
-    <a href="https://bthek1.github.io/webdevelopment_doc/">Webdevelopment Documentation</a>
+    Git stuff
   </div>
 </div>
 
@@ -712,20 +737,144 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>This file will become your README and also the index of your documentation.</p>
+<div id="01abab2d-36f1-4cf2-979d-ad297b9b94c2" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git <span class="op">-</span>h</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>unknown option: -h
+usage: git [--version] [--help] [-C &lt;path&gt;] [-c &lt;name&gt;=&lt;value&gt;]
+           [--exec-path[=&lt;path&gt;]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=&lt;path&gt;] [--work-tree=&lt;path&gt;] [--namespace=&lt;name&gt;]
+           [--super-prefix=&lt;path&gt;] [--config-env=&lt;name&gt;=&lt;envvar&gt;]
+           &lt;command&gt; [&lt;args&gt;]</code></pre>
+</div>
+</div>
+<section id="git-files" class="level2">
+<h2 class="anchored" data-anchor-id="git-files">Git Files</h2>
+<p><code>.git</code> : main file managing git stuff</p>
+<p><code>.gitignore</code> : list of files and files types to ignore</p>
+<p><code>.github</code> : git hub automation</p>
+</section>
 <section id="install" class="level2">
 <h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install webdevelopment_doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
+<section id="configure-git" class="level2">
+<h2 class="anchored" data-anchor-id="configure-git">Configure Git</h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Your Name"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"you@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-new-repo" class="level2">
+<h2 class="anchored" data-anchor-id="creating-new-repo">Creating New Repo</h2>
+<section id="option-1-create-repo-in-github-and-clone-it" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-create-repo-in-github-and-clone-it">Option 1: Create repo in Github and clone it</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>ssh url<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="option-2-create-a-git-repository-locally" class="level3">
+<h3 class="anchored" data-anchor-id="option-2-create-a-git-repository-locally">Option 2: Create a Git repository locally</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Optional</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-m</span> main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="add-and-commit-files" class="level4">
+<h4 class="anchored" data-anchor-id="add-and-commit-files">Add and commit files</h4>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add . </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Your commit message"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="set-up-a-remote-repository" class="level4">
+<h4 class="anchored" data-anchor-id="set-up-a-remote-repository">Set up a remote repository</h4>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add <span class="op">&lt;</span>name<span class="op">&gt;</span> <span class="op">&lt;</span>url<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Example:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote add origin your_remote_repository_url</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sync" class="level4">
+<h4 class="anchored" data-anchor-id="sync">Sync</h4>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--set-upstream-to</span><span class="op">=&lt;</span>remote name<span class="op">&gt;</span>/<span class="op">&lt;</span>remote branch<span class="op">&gt;</span> <span class="op">&lt;</span>local branch<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Example</p>
+</blockquote>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">--set-upstream-to</span><span class="op">=</span>origin/main master</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>sync</p>
+</blockquote>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="push-changes-to-remote" class="level4">
+<h4 class="anchored" data-anchor-id="push-changes-to-remote">Push changes to remote</h4>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="verify-remote-connection" class="level4">
+<h4 class="anchored" data-anchor-id="verify-remote-connection">Verify remote connection</h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+</section>
+<section id="basic-commands" class="level2">
+<h2 class="anchored" data-anchor-id="basic-commands">Basic Commands</h2>
+<section id="checking-git-status" class="level3">
+<h3 class="anchored" data-anchor-id="checking-git-status">Checking git status</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="adding-files-to-git-repo" class="level3">
+<h3 class="anchored" data-anchor-id="adding-files-to-git-repo">Adding files to git repo</h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="op">&lt;</span>filenames<span class="op">&gt;</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For adding all the files in the folder</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add <span class="pp">*</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="commit-it-to-local-repo" class="level3">
+<h3 class="anchored" data-anchor-id="commit-it-to-local-repo">Commit it to local repo</h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"&lt;message&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="for-pushing-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="for-pushing-to-github">For pushing to github</h3>
+<div class="sourceCode" id="cb21"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="git-branches" class="level2">
+<h2 class="anchored" data-anchor-id="git-branches">Git Branches</h2>
+<section id="for-viewing-braches" class="level3">
+<h3 class="anchored" data-anchor-id="for-viewing-braches">For viewing Braches</h3>
+<div id="ba6107d2-8d0e-4588-bd69-410dc0e1f3f6" class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git branch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>* main</code></pre>
 </div>
 </div>
+</section>
+<section id="adding-branches" class="level3">
+<h3 class="anchored" data-anchor-id="adding-branches">Adding branches</h3>
+<div class="sourceCode" id="cb24"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="op">&lt;</span>name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="switching-branches" class="level3">
+<h3 class="anchored" data-anchor-id="switching-branches">Switching branches</h3>
+<div class="sourceCode" id="cb25"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>create branch and move into it</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="push-branch-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="push-branch-to-github">Push branch to github</h3>
+<div class="sourceCode" id="cb27"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--set-upstream</span> <span class="op">&lt;</span>online branch name<span class="op">&gt;</span> <span class="op">&lt;</span>local branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="delete-branch" class="level3">
+<h3 class="anchored" data-anchor-id="delete-branch">Delete branch</h3>
+<div class="sourceCode" id="cb28"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> branch <span class="at">-d</span> <span class="op">&lt;</span>branch name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="review-history" class="level2">
+<h2 class="anchored" data-anchor-id="review-history">Review History</h2>
+<ul>
+<li><code>git log</code>: Lists version history for the current branch</li>
+<li><code>git log --follow [file]</code>: Lists version history for a file, including renames</li>
+<li><code>git diff [first-branch]...[second-branch]</code>: Shows content differences between two branches</li>
+<li><code>git show [commit]</code>: Outputs metadata and content changes of the specified commit</li>
+</ul>
+</section>
+<section id="git-forking" class="level2">
+<h2 class="anchored" data-anchor-id="git-forking">Git Forking</h2>
+</section>
+<section id="git-submodules" class="level2">
+<h2 class="anchored" data-anchor-id="git-submodules">Git submodules</h2>
 
 
 </section>
@@ -1288,10 +1437,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Webdevelopment Documentation">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Webdevelopment Documentation</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git.html" class="pagination-link" aria-label="GIT">
-        <span class="nav-page-text">GIT</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./github.html" class="pagination-link" aria-label="Github">
+        <span class="nav-page-text">Github</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1324,7 +1476,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/01_Git.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

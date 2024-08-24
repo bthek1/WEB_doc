@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Webdevelopment Documentation">
+<meta name="description" content="Gunicorn (Green Unicorn) is a Python WSGI HTTP Server for UNIX that serves your Django application. When using Gunicorn with a Django REST Framework (DRF) project, you can handle HTTP requests efficiently and reliably.">
 
-<title>webdevelopment_doc - Webdevelopment Documentation</title>
+<title>webdevelopment_doc - Gunicorn</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./git.html" rel="next">
+<link href="./makefile.html" rel="next">
+<link href="./nginx.html" rel="prev">
 <link href="./favi.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -107,12 +108,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta property="og:description" content="Webdevelopment Documentation">
+<meta property="og:title" content="webdevelopment_doc - Gunicorn">
+<meta property="og:description" content="Gunicorn (Green Unicorn) is a Python WSGI HTTP Server for UNIX that serves your Django application. When using Gunicorn with a Django REST Framework (DRF) project, you can handle HTTP requests efficiently and reliably.">
 <meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
 <meta property="og:site_name" content="webdevelopment_doc">
-<meta name="twitter:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta name="twitter:description" content="Webdevelopment Documentation">
+<meta name="twitter:title" content="webdevelopment_doc - Gunicorn">
+<meta name="twitter:description" content="Gunicorn (Green Unicorn) is a Python WSGI HTTP Server for UNIX that serves your Django application. When using Gunicorn with a Django REST Framework (DRF) project, you can handle HTTP requests efficiently and reliably.">
 <meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Webdevelopment Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./gunicorn.html">Gunicorn</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Webdevelopment Documentation</span></a>
   </div>
 </li>
@@ -325,7 +326,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gunicorn.html" class="sidebar-item-text sidebar-link">
+  <a href="./gunicorn.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Gunicorn</span></a>
   </div>
 </li>
@@ -679,22 +680,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link" data-scroll-target="#basic-usage">Basic Usage</a></li>
+  <li><a href="#configuration-options" id="toc-configuration-options" class="nav-link" data-scroll-target="#configuration-options">Configuration Options</a>
+  <ul class="collapse">
+  <li><a href="#binding-to-a-specific-address-and-port" id="toc-binding-to-a-specific-address-and-port" class="nav-link" data-scroll-target="#binding-to-a-specific-address-and-port">Binding to a Specific Address and Port</a></li>
+  <li><a href="#number-of-workers" id="toc-number-of-workers" class="nav-link" data-scroll-target="#number-of-workers">Number of Workers</a></li>
+  <li><a href="#timeout" id="toc-timeout" class="nav-link" data-scroll-target="#timeout">Timeout</a></li>
+  <li><a href="#logging" id="toc-logging" class="nav-link" data-scroll-target="#logging">Logging</a></li>
+  </ul></li>
+  <li><a href="#deployment-with-systemd" id="toc-deployment-with-systemd" class="nav-link" data-scroll-target="#deployment-with-systemd">Deployment with Systemd</a>
+  <ul class="collapse">
+  <li><a href="#after-creating-the-service-file-enable-and-start-the-service" id="toc-after-creating-the-service-file-enable-and-start-the-service" class="nav-link" data-scroll-target="#after-creating-the-service-file-enable-and-start-the-service">After creating the service file, enable and start the service</a></li>
+  </ul></li>
+  <li><a href="#security-considerations" id="toc-security-considerations" class="nav-link" data-scroll-target="#security-considerations">Security Considerations</a></li>
+  <li><a href="#performance-tuning" id="toc-performance-tuning" class="nav-link" data-scroll-target="#performance-tuning">Performance Tuning</a></li>
+  <li><a href="#monitoring-and-logging" id="toc-monitoring-and-logging" class="nav-link" data-scroll-target="#monitoring-and-logging">Monitoring and Logging</a></li>
+  <li><a href="#common-issues-and-troubleshooting" id="toc-common-issues-and-troubleshooting" class="nav-link" data-scroll-target="#common-issues-and-troubleshooting">Common Issues and Troubleshooting</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/11_Gunicorn.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Webdevelopment Documentation</h1>
+<h1 class="title">Gunicorn</h1>
 </div>
 
 <div>
   <div class="description">
-    <a href="https://bthek1.github.io/webdevelopment_doc/">Webdevelopment Documentation</a>
+    Gunicorn (Green Unicorn) is a Python WSGI HTTP Server for UNIX that serves your Django application. When using Gunicorn with a Django REST Framework (DRF) project, you can handle HTTP requests efficiently and reliably.
   </div>
 </div>
 
@@ -712,20 +728,128 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>This file will become your README and also the index of your documentation.</p>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install webdevelopment_doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install gunicorn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
-</div>
-</div>
+<section id="basic-usage" class="level2">
+<h2 class="anchored" data-anchor-id="basic-usage">Basic Usage</h2>
+<blockquote class="blockquote">
+<p>To run your Django application using Gunicorn, navigate to your project’s root directory and use the following command</p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gunicorn</span> your_project_name.wsgi:application</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Replace your_project_name with the name of your Django project.</p>
+</blockquote>
+</section>
+<section id="configuration-options" class="level2">
+<h2 class="anchored" data-anchor-id="configuration-options">Configuration Options</h2>
+<blockquote class="blockquote">
+<p>Gunicorn provides various options to configure the server:</p>
+</blockquote>
+<section id="binding-to-a-specific-address-and-port" class="level3">
+<h3 class="anchored" data-anchor-id="binding-to-a-specific-address-and-port">Binding to a Specific Address and Port</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gunicorn</span> <span class="at">--bind</span> 0.0.0.0:8000 your_project_name.wsgi:application</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="number-of-workers" class="level3">
+<h3 class="anchored" data-anchor-id="number-of-workers">Number of Workers</h3>
+<blockquote class="blockquote">
+<p>The number of worker processes for handling requests. More workers can handle more requests concurrently but consume more memory.</p>
+</blockquote>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gunicorn</span> <span class="at">--workers</span> 3 your_project_name.wsgi:application</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="timeout" class="level3">
+<h3 class="anchored" data-anchor-id="timeout">Timeout</h3>
+<blockquote class="blockquote">
+<p>The maximum number of seconds a worker can spend handling a request before it is killed and restarted.</p>
+</blockquote>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gunicorn</span> <span class="at">--timeout</span> 30 your_project_name.wsgi:application</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="logging" class="level3">
+<h3 class="anchored" data-anchor-id="logging">Logging</h3>
+<blockquote class="blockquote">
+<p>You can specify log files for Gunicorn</p>
+</blockquote>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">gunicorn</span> <span class="at">--access-logfile</span> access.log <span class="at">--error-logfile</span> error.log your_project_name.wsgi:application</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="deployment-with-systemd" class="level2">
+<h2 class="anchored" data-anchor-id="deployment-with-systemd">Deployment with Systemd</h2>
+<blockquote class="blockquote">
+<p>For a production deployment, it’s common to use systemd to manage Gunicorn. Here’s an example of a systemd service file</p>
+<p>In file <code>/etc/systemd/system/gunicorn.service</code></p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[Unit]</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="dt">Description</span><span class="ot">=</span><span class="st">gunicorn daemon</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="dt">After</span><span class="ot">=</span><span class="st">network.target</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="kw">[Service]</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="dt">User</span><span class="ot">=</span><span class="st">your_user</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="dt">Group</span><span class="ot">=</span><span class="st">www-data</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="dt">WorkingDirectory</span><span class="ot">=</span><span class="st">/path/to/your/project</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="dt">ExecStart</span><span class="ot">=</span><span class="st">/path/to/your/venv/bin/gunicorn --workers 3 --bind unix:/path/to/your/project/gunicorn.sock your_project_name.wsgi:application</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="kw">[Install]</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="dt">WantedBy</span><span class="ot">=</span><span class="st">multi-user.target</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Replace your_user with your system username.</li>
+<li>Replace /path/to/your/project with the path to your Django project.</li>
+<li>Replace /path/to/your/venv with the path to your virtual environment.</li>
+</ul>
+<blockquote class="blockquote">
+<p>Example</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode ini code-with-copy"><code class="sourceCode ini"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[Unit]</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="dt">Description</span><span class="ot">=</span><span class="st">gunicorn daemon</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="dt">After</span><span class="ot">=</span><span class="st">network.target</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">[Service]</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="dt">User</span><span class="ot">=</span><span class="st">ubuntu</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="dt">Group</span><span class="ot">=</span><span class="st">www-data</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="dt">WorkingDirectory</span><span class="ot">=</span><span class="st">/home/ubuntu/django_todo</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="dt">UMask</span><span class="ot">=</span><span class="dv">007</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="dt">ExecStartPre</span><span class="ot">=</span><span class="st">/bin/bash -c 'mkdir -p /home/ubuntu/django_todo &amp;&amp; chown ubuntu:www-data /home/ubuntu/django_todo'</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="dt">ExecStart</span><span class="ot">=</span><span class="st">/home/ubuntu/django_todo/.venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/django_todo/gunicorn.sock config.wsgi:application</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="kw">[Install]</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="dt">WantedBy</span><span class="ot">=</span><span class="st">multi-user.target</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="after-creating-the-service-file-enable-and-start-the-service" class="level3">
+<h3 class="anchored" data-anchor-id="after-creating-the-service-file-enable-and-start-the-service">After creating the service file, enable and start the service</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl daemon-reload</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable gunicorn</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start gunicorn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="security-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="security-considerations">Security Considerations</h2>
+<ul>
+<li>Keep Gunicorn and your Django project dependencies up to date.</li>
+<li>Use HTTPS for secure communication.</li>
+<li>Use a firewall to restrict access to the Gunicorn server, allowing only the web server (e.g., Nginx) to communicate with it.</li>
+</ul>
+</section>
+<section id="performance-tuning" class="level2">
+<h2 class="anchored" data-anchor-id="performance-tuning">Performance Tuning</h2>
+<ul>
+<li>Number of Workers: Start with (2 x $num_cores) + 1 workers. Monitor and adjust based on your application’s performance and server’s resource availability.</li>
+<li>Worker Class: Use different worker classes based on your application’s nature, e.g., gevent for async applications.</li>
+<li>Keep-Alive: Adjust the keep-alive setting for persistent connections, especially in high-traffic scenarios.</li>
+</ul>
+</section>
+<section id="monitoring-and-logging" class="level2">
+<h2 class="anchored" data-anchor-id="monitoring-and-logging">Monitoring and Logging</h2>
+<ul>
+<li>Use monitoring tools like New Relic, Datadog, or Prometheus to keep an eye on the performance and health of your application.</li>
+<li>Log files should be monitored for errors and access patterns.</li>
+</ul>
+</section>
+<section id="common-issues-and-troubleshooting" class="level2">
+<h2 class="anchored" data-anchor-id="common-issues-and-troubleshooting">Common Issues and Troubleshooting</h2>
+<ul>
+<li>502 Bad Gateway: Often due to Gunicorn not running or configuration issues with the reverse proxy server.</li>
+<li>Slow Performance: Could be due to insufficient worker processes or server resources. Profiling the application can help identify bottlenecks.</li>
+<li>Memory Leaks: Regularly monitor memory usage and ensure proper resource management in the application.</li>
+</ul>
 
 
 </section>
@@ -1288,10 +1412,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./nginx.html" class="pagination-link" aria-label="Nginx">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Nginx</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git.html" class="pagination-link" aria-label="GIT">
-        <span class="nav-page-text">GIT</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./makefile.html" class="pagination-link" aria-label="Makefile">
+        <span class="nav-page-text">Makefile</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1324,7 +1451,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/11_Gunicorn.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

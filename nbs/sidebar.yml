@@ -2,6 +2,7 @@ website:
   sidebar:
     contents:
       - index.ipynb
+      - 01_Git.ipynb
       - 02_Github.ipynb
       - 04_Docker.ipynb
       - 05_PIP&GIT_release.ipynb
@@ -11,7 +12,8 @@ website:
       - 09_Nookal.ipynb
       - 10_Nginx.ipynb
       - 11_Gunicorn.ipynb
-      - p_Git.ipynb
+      - 12_Makefile.ipynb
+      - 13_Linux_Users.ipynb
       - section: Back_end
         contents:
           - Back_end/01_Influx.ipynb
@@ -22,21 +24,22 @@ website:
               - Back_end/Databases/03_SQLite.ipynb
           - section: Django
             contents:
-              - Back_end/Django/01_Django_Basics.ipynb
-              - Back_end/Django/02_Django_X.ipynb
-              - Back_end/Django/031_DRF_Basic.ipynb
-              - Back_end/Django/032_DRF_Quickstart.ipynb
-              - Back_end/Django/033_DRF_Tutorial.ipynb
-              - Back_end/Django/04_Models_Design.ipynb
-              - Back_end/Django/05_Authentication.ipynb
-              - Back_end/Django/06_Permissions.ipynb
-              - Back_end/Django/07_Secrets.ipynb
-              - Back_end/Django/08_Serialization.ipynb
-              - Back_end/Django/09_Views.ipynb
-              - Back_end/Django/10_Admin.ipynb
-              - Back_end/Django/11_Custom_Commands.ipynb
-              - Back_end/Django/12_Testing.ipynb
-              - Back_end/Django/13_Users.ipynb
+              - Back_end/Django/01_Models_Design.ipynb
+              - Back_end/Django/02_Authentication.ipynb
+              - Back_end/Django/03_Permissions.ipynb
+              - Back_end/Django/04_Secrets.ipynb
+              - Back_end/Django/05_Serialization.ipynb
+              - Back_end/Django/06_Views.ipynb
+              - Back_end/Django/07_Admin.ipynb
+              - Back_end/Django/08_Custom_Commands.ipynb
+              - Back_end/Django/11_Testing.ipynb
+              - Back_end/Django/12_Users.ipynb
+              - Back_end/Django/13_Forms.ipynb
+              - Back_end/Django/50_Django_Basics.ipynb
+              - Back_end/Django/51_Django_X.ipynb
+              - Back_end/Django/531_DRF_Basic.ipynb
+              - Back_end/Django/532_DRF_Quickstart.ipynb
+              - Back_end/Django/533_DRF_Tutorial.ipynb
               - Back_end/Django/90_RM_django_setup.ipynb
       - section: 'Cloud '
         contents:
@@ -54,7 +57,8 @@ website:
           - Front_end/01_Streamlit.ipynb
           - Front_end/02_Gradio.ipynb
           - Front_end/03_Grafana.ipynb
-          - Front_end/04_fastHTML.ipynb
+          - Front_end/04_HTML.ipynb
+          - Front_end/05_fastHTML.ipynb
           - section: Flutter
             contents:
               - Front_end/Flutter/01_Flutter_Setup.ipynb

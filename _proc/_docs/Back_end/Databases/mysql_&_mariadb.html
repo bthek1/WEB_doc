@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Webdevelopment Documentation">
+<meta name="description" content="MariaDB is a popular open-source relational database management system (RDBMS) that is a fork of MySQL. It is designed for high performance, scalability, and reliability.">
 
-<title>webdevelopment_doc - Webdevelopment Documentation</title>
+<title>webdevelopment_doc - MariaDB and MySQL</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,26 +58,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./git.html" rel="next">
-<link href="./favi.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Back_end/Databases/sqlite.html" rel="next">
+<link href="../../Back_end/Databases/postgresql.html" rel="prev">
+<link href="../../favi.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -106,14 +107,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta property="og:description" content="Webdevelopment Documentation">
-<meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="webdevelopment_doc - MariaDB and MySQL">
+<meta property="og:description" content="MariaDB is a popular open-source relational database management system (RDBMS) that is a fork of MySQL. It is designed for high performance, scalability, and reliability.">
+<meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Back_end/Databases/Logo.svg">
 <meta property="og:site_name" content="webdevelopment_doc">
-<meta name="twitter:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta name="twitter:description" content="Webdevelopment Documentation">
-<meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
+<meta name="twitter:title" content="webdevelopment_doc - MariaDB and MySQL">
+<meta name="twitter:description" content="MariaDB is a popular open-source relational database management system (RDBMS) that is a fork of MySQL. It is designed for high performance, scalability, and reliability.">
+<meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Back_end/Databases/Logo.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -124,8 +125,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Logo.svg" alt="Quarto logo." class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../Logo.svg" alt="Quarto logo." class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Webdevelopment Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Back_end/influx.html">Back End</a></li><li class="breadcrumb-item"><a href="../../Back_end/Databases/postgresql.html">Databases</a></li><li class="breadcrumb-item"><a href="../../Back_end/Databases/mysql_&amp;_mariadb.html">MariaDB and MySQL</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,79 +266,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Webdevelopment Documentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git.html" class="sidebar-item-text sidebar-link">
+  <a href="../../git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GIT</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github.html" class="sidebar-item-text sidebar-link">
+  <a href="../../github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Github</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Docker</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PIP and GIT release</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ssh&amp;vnc&amp;ftp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ssh&amp;vnc&amp;ftp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SSH, VNC and FTP</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prefect.html" class="sidebar-item-text sidebar-link">
+  <a href="../../prefect.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prefect</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wireshark.html" class="sidebar-item-text sidebar-link">
+  <a href="../../wireshark.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wireshark</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nookal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../nookal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nookal</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nginx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../nginx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nginx</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gunicorn.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gunicorn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gunicorn</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./makefile.html" class="sidebar-item-text sidebar-link">
+  <a href="../../makefile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Makefile</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linux_users.html" class="sidebar-item-text sidebar-link">
+  <a href="../../linux_users.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linux Users, Groups and Permissions</span></a>
   </div>
 </li>
@@ -352,34 +353,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/influx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/influx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Influx</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
  <span class="menu-text">Databases</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/postgresql.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/postgresql.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PostgreSQL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/mysql_&amp;_mariadb.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/mysql_&amp;_mariadb.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">MariaDB and MySQL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/sqlite.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/sqlite.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SQLite</span></a>
   </div>
 </li>
@@ -396,103 +397,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/models_design.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/models_design.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Model Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/authentication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/authentication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Authentication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/permissions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/permissions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Permissions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/secrets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/secrets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Secrets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/serialization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/serialization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Serialization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/views.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/views.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Views</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/admin.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/admin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Admin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/custom_commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/custom_commands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom Commands</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/testing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/testing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/users.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/users.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/forms.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/forms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Forms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/django_basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/django_basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Django Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/django_x.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/django_x.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DjangoX</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_basic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_basic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Basic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_quickstart.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_quickstart.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Quickstart</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_tutorial.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_tutorial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Tutorial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/rm_django_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/rm_django_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Django For Recovery Metrics</span></a>
   </div>
 </li>
@@ -511,13 +512,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Cloud /oracle.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Cloud /oracle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Oracle</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Cloud /aws-amazon.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Cloud /aws-amazon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AMS - Amazon</span></a>
   </div>
 </li>
@@ -534,31 +535,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/venv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/venv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Venv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/pipenv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/pipenv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pipenv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/poetry.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/poetry.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poetry</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/conda.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/conda.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conda</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/direnv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/direnv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Direnv</span></a>
   </div>
 </li>
@@ -575,31 +576,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/streamlit.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/streamlit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Streamlit</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/gradio.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/gradio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gradio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/grafana.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/grafana.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grafana</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/html.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HTML</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/fasthtml.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/fasthtml.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fastHTML</span></a>
   </div>
 </li>
@@ -614,25 +615,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/flutter_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/flutter_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Flutter Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/widgets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/widgets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">App development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/dart.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/dart.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dart</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/riverpod.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/riverpod.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Riverpod</span></a>
   </div>
 </li>
@@ -649,19 +650,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/react.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/react.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">React + typescript</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/react_native.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/react_native.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">React-Native</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/node.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/node.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Node</span></a>
   </div>
 </li>
@@ -679,22 +680,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#introduction-to-mysql" id="toc-introduction-to-mysql" class="nav-link active" data-scroll-target="#introduction-to-mysql">Introduction to MySQL</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#introduction-to-mariadb" id="toc-introduction-to-mariadb" class="nav-link" data-scroll-target="#introduction-to-mariadb">Introduction to MariaDB</a></li>
+  <li><a href="#installation-1" id="toc-installation-1" class="nav-link" data-scroll-target="#installation-1">Installation</a></li>
+  <li><a href="#configuration" id="toc-configuration" class="nav-link" data-scroll-target="#configuration">Configuration</a></li>
+  <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link" data-scroll-target="#basic-usage">Basic Usage</a>
+  <ul class="collapse">
+  <li><a href="#accessing-the-mariadb-shell" id="toc-accessing-the-mariadb-shell" class="nav-link" data-scroll-target="#accessing-the-mariadb-shell">Accessing the MariaDB Shell</a></li>
+  <li><a href="#creating-a-database" id="toc-creating-a-database" class="nav-link" data-scroll-target="#creating-a-database">Creating a Database</a></li>
+  <li><a href="#creating-a-user-and-granting-permissions" id="toc-creating-a-user-and-granting-permissions" class="nav-link" data-scroll-target="#creating-a-user-and-granting-permissions">Creating a User and Granting Permissions</a></li>
+  </ul></li>
+  <li><a href="#database-operations" id="toc-database-operations" class="nav-link" data-scroll-target="#database-operations">Database Operations</a>
+  <ul class="collapse">
+  <li><a href="#creating-tables" id="toc-creating-tables" class="nav-link" data-scroll-target="#creating-tables">Creating Tables</a></li>
+  <li><a href="#inserting-data" id="toc-inserting-data" class="nav-link" data-scroll-target="#inserting-data">Inserting Data</a></li>
+  <li><a href="#querying-data" id="toc-querying-data" class="nav-link" data-scroll-target="#querying-data">Querying Data</a></li>
+  <li><a href="#updating-data" id="toc-updating-data" class="nav-link" data-scroll-target="#updating-data">Updating Data</a></li>
+  <li><a href="#deleting-data" id="toc-deleting-data" class="nav-link" data-scroll-target="#deleting-data">Deleting Data</a></li>
+  </ul></li>
+  <li><a href="#advanced-features" id="toc-advanced-features" class="nav-link" data-scroll-target="#advanced-features">Advanced Features</a>
+  <ul class="collapse">
+  <li><a href="#stored-procedures" id="toc-stored-procedures" class="nav-link" data-scroll-target="#stored-procedures">Stored Procedures</a></li>
+  <li><a href="#triggers" id="toc-triggers" class="nav-link" data-scroll-target="#triggers">Triggers</a></li>
+  <li><a href="#views" id="toc-views" class="nav-link" data-scroll-target="#views">Views</a></li>
+  </ul></li>
+  <li><a href="#security" id="toc-security" class="nav-link" data-scroll-target="#security">Security</a>
+  <ul class="collapse">
+  <li><a href="#secure-installation" id="toc-secure-installation" class="nav-link" data-scroll-target="#secure-installation">Secure Installation</a></li>
+  <li><a href="#user-privileges" id="toc-user-privileges" class="nav-link" data-scroll-target="#user-privileges">User Privileges</a></li>
+  </ul></li>
+  <li><a href="#performance-tuning" id="toc-performance-tuning" class="nav-link" data-scroll-target="#performance-tuning">Performance Tuning</a>
+  <ul class="collapse">
+  <li><a href="#indexes" id="toc-indexes" class="nav-link" data-scroll-target="#indexes">Indexes</a></li>
+  <li><a href="#query-optimization" id="toc-query-optimization" class="nav-link" data-scroll-target="#query-optimization">Query Optimization</a></li>
+  <li><a href="#caching" id="toc-caching" class="nav-link" data-scroll-target="#caching">Caching</a></li>
+  </ul></li>
+  <li><a href="#backup-and-restore" id="toc-backup-and-restore" class="nav-link" data-scroll-target="#backup-and-restore">Backup and Restore</a>
+  <ul class="collapse">
+  <li><a href="#backup" id="toc-backup" class="nav-link" data-scroll-target="#backup">Backup</a></li>
+  <li><a href="#restore" id="toc-restore" class="nav-link" data-scroll-target="#restore">Restore</a></li>
+  </ul></li>
+  <li><a href="#replication" id="toc-replication" class="nav-link" data-scroll-target="#replication">Replication</a></li>
+  <li><a href="#high-availability" id="toc-high-availability" class="nav-link" data-scroll-target="#high-availability">High Availability</a></li>
+  <li><a href="#monitoring-and-maintenance" id="toc-monitoring-and-maintenance" class="nav-link" data-scroll-target="#monitoring-and-maintenance">Monitoring and Maintenance</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/Back_end/Databases/02_MySQL_&amp;_MariaDB.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Back_end/influx.html">Back End</a></li><li class="breadcrumb-item"><a href="../../Back_end/Databases/postgresql.html">Databases</a></li><li class="breadcrumb-item"><a href="../../Back_end/Databases/mysql_&amp;_mariadb.html">MariaDB and MySQL</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Webdevelopment Documentation</h1>
+<h1 class="title">MariaDB and MySQL</h1>
 </div>
 
 <div>
   <div class="description">
-    <a href="https://bthek1.github.io/webdevelopment_doc/">Webdevelopment Documentation</a>
+    MariaDB is a popular open-source relational database management system (RDBMS) that is a fork of MySQL. It is designed for high performance, scalability, and reliability.
   </div>
 </div>
 
@@ -712,20 +755,180 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>This file will become your README and also the index of your documentation.</p>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install webdevelopment_doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="introduction-to-mysql" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-mysql">Introduction to MySQL</h2>
+<ul>
+<li>Origin: Developed by MySQL AB in 1995, acquired by Oracle Corporation in 2010.</li>
+<li>License: Open-source under the GPL license, with a commercial version available.</li>
+<li>Compatibility: Supports multiple platforms including Linux, Windows, macOS.</li>
+</ul>
 </section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
-</div>
-</div>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install mysql-server</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="introduction-to-mariadb" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-mariadb">Introduction to MariaDB</h2>
+<ul>
+<li>Origin: Created by the original developers of MySQL after Oracle acquired MySQL.</li>
+<li>Compatibility: Highly compatible with MySQL, allowing easy migration of databases.</li>
+<li>License: Open-source under the GPL license.</li>
+</ul>
+</section>
+<section id="installation-1" class="level2">
+<h2 class="anchored" data-anchor-id="installation-1">Installation</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install mariadb-server</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="configuration" class="level2">
+<h2 class="anchored" data-anchor-id="configuration">Configuration</h2>
+<ul>
+<li>Configuration File: The primary configuration file is my.cnf or my.ini.</li>
+<li>Location: Typically found in /etc/mysql/ or /etc/ on Linux and in the MariaDB installation directory on Windows.</li>
+</ul>
+</section>
+<section id="basic-usage" class="level2">
+<h2 class="anchored" data-anchor-id="basic-usage">Basic Usage</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start mariadb</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl stop mariadb</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable mariadb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="accessing-the-mariadb-shell" class="level3">
+<h3 class="anchored" data-anchor-id="accessing-the-mariadb-shell">Accessing the MariaDB Shell</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mysql</span> <span class="at">-u</span> root <span class="at">-p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-a-database" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-database">Creating a Database</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> mydatabase;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-a-user-and-granting-permissions" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-user-and-granting-permissions">Creating a User and Granting Permissions</h3>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="fu">USER</span> <span class="st">'myuser'</span>@<span class="st">'localhost'</span> <span class="kw">IDENTIFIED</span> <span class="kw">BY</span> <span class="st">'mypassword'</span>;</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">GRANT</span> <span class="kw">ALL</span> <span class="kw">PRIVILEGES</span> <span class="kw">ON</span> mydatabase.<span class="op">*</span> <span class="kw">TO</span> <span class="st">'myuser'</span>@<span class="st">'localhost'</span>;</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="kw">FLUSH</span> <span class="kw">PRIVILEGES</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="database-operations" class="level2">
+<h2 class="anchored" data-anchor-id="database-operations">Database Operations</h2>
+<section id="creating-tables" class="level3">
+<h3 class="anchored" data-anchor-id="creating-tables">Creating Tables</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">USE</span> mydatabase;</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> mytable (</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">id</span> <span class="dt">INT</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span> AUTO_INCREMENT,</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">VARCHAR</span>(<span class="dv">100</span>),</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    age <span class="dt">INT</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="inserting-data" class="level3">
+<h3 class="anchored" data-anchor-id="inserting-data">Inserting Data</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> mytable (name, age) <span class="kw">VALUES</span> (<span class="st">'Alice'</span>, <span class="dv">30</span>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="querying-data" class="level3">
+<h3 class="anchored" data-anchor-id="querying-data">Querying Data</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> mytable;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="updating-data" class="level3">
+<h3 class="anchored" data-anchor-id="updating-data">Updating Data</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">UPDATE</span> mytable <span class="kw">SET</span> age <span class="op">=</span> <span class="dv">31</span> <span class="kw">WHERE</span> name <span class="op">=</span> <span class="st">'Alice'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="deleting-data" class="level3">
+<h3 class="anchored" data-anchor-id="deleting-data">Deleting Data</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DELETE</span> <span class="kw">FROM</span> mytable <span class="kw">WHERE</span> name <span class="op">=</span> <span class="st">'Alice'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="advanced-features" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-features">Advanced Features</h2>
+<section id="stored-procedures" class="level3">
+<h3 class="anchored" data-anchor-id="stored-procedures">Stored Procedures</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>DELIMITER <span class="op">//</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">PROCEDURE</span> myprocedure()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> mytable;</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span> <span class="op">//</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>DELIMITER ;</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CALL</span> myprocedure();</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="triggers" class="level3">
+<h3 class="anchored" data-anchor-id="triggers">Triggers</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TRIGGER</span> before_insert_mytable</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">BEFORE</span> <span class="kw">INSERT</span> <span class="kw">ON</span> mytable</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">FOR</span> <span class="kw">EACH</span> <span class="kw">ROW</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="cf">BEGIN</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SET</span> <span class="kw">NEW</span>.age <span class="op">=</span> <span class="cf">IF</span>(<span class="kw">NEW</span>.age <span class="kw">IS</span> <span class="kw">NULL</span>, <span class="dv">0</span>, <span class="kw">NEW</span>.age);</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="cf">END</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="views" class="level3">
+<h3 class="anchored" data-anchor-id="views">Views</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">VIEW</span> myview <span class="kw">AS</span> <span class="kw">SELECT</span> name, age <span class="kw">FROM</span> mytable <span class="kw">WHERE</span> age <span class="op">&gt;</span> <span class="dv">25</span>;</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> myview;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="security" class="level2">
+<h2 class="anchored" data-anchor-id="security">Security</h2>
+<section id="secure-installation" class="level3">
+<h3 class="anchored" data-anchor-id="secure-installation">Secure Installation</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mysql_secure_installation</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="user-privileges" class="level3">
+<h3 class="anchored" data-anchor-id="user-privileges">User Privileges</h3>
+<blockquote class="blockquote">
+<p>Grant specific privileges to users instead of using GRANT ALL PRIVILEGES.</p>
+</blockquote>
+</section>
+</section>
+<section id="performance-tuning" class="level2">
+<h2 class="anchored" data-anchor-id="performance-tuning">Performance Tuning</h2>
+<section id="indexes" class="level3">
+<h3 class="anchored" data-anchor-id="indexes">Indexes</h3>
+<blockquote class="blockquote">
+<p>Use indexes to speed up query performance.</p>
+</blockquote>
+<div class="sourceCode" id="cb16"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">INDEX</span> idx_name <span class="kw">ON</span> mytable (name);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="query-optimization" class="level3">
+<h3 class="anchored" data-anchor-id="query-optimization">Query Optimization</h3>
+<blockquote class="blockquote">
+<p>Use the EXPLAIN statement to analyze query performance.</p>
+</blockquote>
+<div class="sourceCode" id="cb17"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">EXPLAIN</span> <span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> mytable <span class="kw">WHERE</span> name <span class="op">=</span> <span class="st">'Alice'</span>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="caching" class="level3">
+<h3 class="anchored" data-anchor-id="caching">Caching</h3>
+<blockquote class="blockquote">
+<p>Enable query caching in the configuration file.</p>
+</blockquote>
+</section>
+</section>
+<section id="backup-and-restore" class="level2">
+<h2 class="anchored" data-anchor-id="backup-and-restore">Backup and Restore</h2>
+<section id="backup" class="level3">
+<h3 class="anchored" data-anchor-id="backup">Backup</h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mysqldump</span> <span class="at">-u</span> root <span class="at">-p</span> mydatabase <span class="op">&gt;</span> mydatabase.sql</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="restore" class="level3">
+<h3 class="anchored" data-anchor-id="restore">Restore</h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mysql</span> <span class="at">-u</span> root <span class="at">-p</span> mydatabase <span class="op">&lt;</span> mydatabase.sql</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="replication" class="level2">
+<h2 class="anchored" data-anchor-id="replication">Replication</h2>
+<ul>
+<li>Master-Slave Replication: Set up replication for high availability and scalability.</li>
+<li>Configuration: Configure my.cnf on both master and slave servers.</li>
+</ul>
+</section>
+<section id="high-availability" class="level2">
+<h2 class="anchored" data-anchor-id="high-availability">High Availability</h2>
+<ul>
+<li>Galera Cluster: Use Galera Cluster for synchronous multi-master replication.</li>
+</ul>
+</section>
+<section id="monitoring-and-maintenance" class="level2">
+<h2 class="anchored" data-anchor-id="monitoring-and-maintenance">Monitoring and Maintenance</h2>
+<ul>
+<li>Monitoring Tools: Use tools like MySQLTuner and Percona Monitoring and Management (PMM) to monitor performance.</li>
+<li>Log Files: Monitor log files (error.log, slow-query.log) for troubleshooting.</li>
+</ul>
 
 
 </section>
@@ -1288,10 +1491,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../Back_end/Databases/postgresql.html" class="pagination-link" aria-label="PostgreSQL">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">PostgreSQL</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git.html" class="pagination-link" aria-label="GIT">
-        <span class="nav-page-text">GIT</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Back_end/Databases/sqlite.html" class="pagination-link" aria-label="SQLite">
+        <span class="nav-page-text">SQLite</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1304,7 +1510,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link active" href="../../index.html" aria-current="page">
 <p>Trademark</p>
 </a>
   </li>  
@@ -1319,12 +1525,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../../index.html">
 <p>Trademark</p>
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/Back_end/Databases/02_MySQL_&amp;_MariaDB.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

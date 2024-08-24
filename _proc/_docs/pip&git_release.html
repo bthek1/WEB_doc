@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Webdevelopment Documentation">
+<meta name="description" content="Fast AI in Docker Container">
 
-<title>webdevelopment_doc - Webdevelopment Documentation</title>
+<title>webdevelopment_doc - PIP and GIT release</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./git.html" rel="next">
+<link href="./ssh&amp;vnc&amp;ftp.html" rel="next">
+<link href="./docker.html" rel="prev">
 <link href="./favi.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -107,12 +108,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta property="og:description" content="Webdevelopment Documentation">
+<meta property="og:title" content="webdevelopment_doc - PIP and GIT release">
+<meta property="og:description" content="Fast AI in Docker Container">
 <meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
 <meta property="og:site_name" content="webdevelopment_doc">
-<meta name="twitter:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta name="twitter:description" content="Webdevelopment Documentation">
+<meta name="twitter:title" content="webdevelopment_doc - PIP and GIT release">
+<meta name="twitter:description" content="Fast AI in Docker Container">
 <meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Webdevelopment Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./pip&amp;git_release.html">PIP and GIT release</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Webdevelopment Documentation</span></a>
   </div>
 </li>
@@ -289,7 +290,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
+  <a href="./pip&amp;git_release.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">PIP and GIT release</span></a>
   </div>
 </li>
@@ -679,22 +680,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#github-connection" id="toc-github-connection" class="nav-link active" data-scroll-target="#github-connection">Github Connection</a></li>
+  <li><a href="#github-release" id="toc-github-release" class="nav-link" data-scroll-target="#github-release">Github release</a></li>
+  <li><a href="#install-twine" id="toc-install-twine" class="nav-link" data-scroll-target="#install-twine">Install twine</a></li>
+  <li><a href="#add-pypi-token-to-.pypirc" id="toc-add-pypi-token-to-.pypirc" class="nav-link" data-scroll-target="#add-pypi-token-to-.pypirc">Add pypi token to ./pypirc</a></li>
+  <li><a href="#nbdev-command" id="toc-nbdev-command" class="nav-link" data-scroll-target="#nbdev-command">Nbdev Command</a>
+  <ul class="collapse">
+  <li><a href="#first-bump-version" id="toc-first-bump-version" class="nav-link" data-scroll-target="#first-bump-version">First bump version</a></li>
+  <li><a href="#pip-upload" id="toc-pip-upload" class="nav-link" data-scroll-target="#pip-upload">pip upload</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/05_PIP&amp;GIT_release.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Webdevelopment Documentation</h1>
-</div>
+<h1 class="title">PIP and GIT release</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">c1</div>
+    <div class="quarto-category">c2</div>
+  </div>
+  </div>
 
 <div>
   <div class="description">
-    <a href="https://bthek1.github.io/webdevelopment_doc/">Webdevelopment Documentation</a>
+    Fast AI in Docker Container
   </div>
 </div>
 
@@ -712,22 +724,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>This file will become your README and also the index of your documentation.</p>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install webdevelopment_doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="github-connection" class="level2">
+<h2 class="anchored" data-anchor-id="github-connection">Github Connection</h2>
+<p>create ssh on computer</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"your_email@example.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Add it to ssh agent</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh-add</span> /c/Users/YOU/.ssh/id_ed25519</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Connect it to github</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-T</span> git@github.com</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
-</div>
-</div>
+<section id="github-release" class="level2">
+<h2 class="anchored" data-anchor-id="github-release">Github release</h2>
+<p>Add github token to .bashrc</p>
+<p><strong>Generate personal access classic token from github</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GITHUB_TOKEN</span><span class="op">=&lt;</span>github_token<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>bump version</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nbdev_bump_version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nbdev_release_git</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="install-twine" class="level2">
+<h2 class="anchored" data-anchor-id="install-twine">Install twine</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install twine</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="add-pypi-token-to-.pypirc" class="level2">
+<h2 class="anchored" data-anchor-id="add-pypi-token-to-.pypirc">Add pypi token to ./pypirc</h2>
+<p><strong>Generate token from Pypi</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[pypi]</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">username</span> = __token__</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">password</span> = <span class="op">&lt;</span>pypi-token<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="nbdev-command" class="level2">
+<h2 class="anchored" data-anchor-id="nbdev-command">Nbdev Command</h2>
+<section id="first-bump-version" class="level3">
+<h3 class="anchored" data-anchor-id="first-bump-version">First bump version</h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nbdev_bump_version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="pip-upload" class="level3">
+<h3 class="anchored" data-anchor-id="pip-upload">pip upload</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">nbdev_pypi</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -1288,10 +1325,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./docker.html" class="pagination-link" aria-label="Docker">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Docker</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git.html" class="pagination-link" aria-label="GIT">
-        <span class="nav-page-text">GIT</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ssh&amp;vnc&amp;ftp.html" class="pagination-link" aria-label="SSH, VNC and FTP">
+        <span class="nav-page-text">SSH, VNC and FTP</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1324,7 +1364,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/05_PIP&amp;GIT_release.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Webdevelopment Documentation">
+<meta name="description" content="DRF Tutorial">
 
-<title>webdevelopment_doc - Webdevelopment Documentation</title>
+<title>webdevelopment_doc - DRF Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,26 +58,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./git.html" rel="next">
-<link href="./favi.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Back_end/Django/rm_django_setup.html" rel="next">
+<link href="../../Back_end/Django/drf_quickstart.html" rel="prev">
+<link href="../../favi.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -106,14 +107,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta property="og:description" content="Webdevelopment Documentation">
-<meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="webdevelopment_doc - DRF Tutorial">
+<meta property="og:description" content="DRF Tutorial">
+<meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Back_end/Django/Logo.svg">
 <meta property="og:site_name" content="webdevelopment_doc">
-<meta name="twitter:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta name="twitter:description" content="Webdevelopment Documentation">
-<meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
+<meta name="twitter:title" content="webdevelopment_doc - DRF Tutorial">
+<meta name="twitter:description" content="DRF Tutorial">
+<meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Back_end/Django/Logo.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -124,8 +125,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Logo.svg" alt="Quarto logo." class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../Logo.svg" alt="Quarto logo." class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Webdevelopment Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Back_end/influx.html">Back End</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/models_design.html">Django</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/drf_tutorial.html">DRF Tutorial</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,79 +266,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Webdevelopment Documentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git.html" class="sidebar-item-text sidebar-link">
+  <a href="../../git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GIT</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github.html" class="sidebar-item-text sidebar-link">
+  <a href="../../github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Github</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Docker</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PIP and GIT release</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ssh&amp;vnc&amp;ftp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ssh&amp;vnc&amp;ftp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SSH, VNC and FTP</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prefect.html" class="sidebar-item-text sidebar-link">
+  <a href="../../prefect.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prefect</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wireshark.html" class="sidebar-item-text sidebar-link">
+  <a href="../../wireshark.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wireshark</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nookal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../nookal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nookal</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nginx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../nginx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nginx</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gunicorn.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gunicorn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gunicorn</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./makefile.html" class="sidebar-item-text sidebar-link">
+  <a href="../../makefile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Makefile</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linux_users.html" class="sidebar-item-text sidebar-link">
+  <a href="../../linux_users.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linux Users, Groups and Permissions</span></a>
   </div>
 </li>
@@ -352,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/influx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/influx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Influx</span></a>
   </div>
 </li>
@@ -367,19 +368,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/postgresql.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/postgresql.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PostgreSQL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/mysql_&amp;_mariadb.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/mysql_&amp;_mariadb.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MariaDB and MySQL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/sqlite.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/sqlite.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SQLite</span></a>
   </div>
 </li>
@@ -387,112 +388,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Django</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/models_design.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/models_design.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Model Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/authentication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/authentication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Authentication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/permissions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/permissions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Permissions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/secrets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/secrets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Secrets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/serialization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/serialization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Serialization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/views.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/views.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Views</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/admin.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/admin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Admin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/custom_commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/custom_commands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom Commands</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/testing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/testing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/users.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/users.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/forms.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/forms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Forms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/django_basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/django_basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Django Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/django_x.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/django_x.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DjangoX</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_basic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_basic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Basic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_quickstart.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_quickstart.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Quickstart</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_tutorial.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_tutorial.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">DRF Tutorial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/rm_django_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/rm_django_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Django For Recovery Metrics</span></a>
   </div>
 </li>
@@ -511,13 +512,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Cloud /oracle.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Cloud /oracle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Oracle</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Cloud /aws-amazon.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Cloud /aws-amazon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AMS - Amazon</span></a>
   </div>
 </li>
@@ -534,31 +535,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/venv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/venv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Venv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/pipenv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/pipenv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pipenv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/poetry.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/poetry.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poetry</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/conda.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/conda.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conda</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/direnv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/direnv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Direnv</span></a>
   </div>
 </li>
@@ -575,31 +576,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/streamlit.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/streamlit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Streamlit</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/gradio.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/gradio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gradio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/grafana.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/grafana.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grafana</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/html.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HTML</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/fasthtml.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/fasthtml.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fastHTML</span></a>
   </div>
 </li>
@@ -614,25 +615,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/flutter_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/flutter_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Flutter Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/widgets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/widgets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">App development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/dart.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/dart.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dart</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/riverpod.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/riverpod.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Riverpod</span></a>
   </div>
 </li>
@@ -649,19 +650,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/react.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/react.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">React + typescript</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/react_native.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/react_native.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">React-Native</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/node.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/node.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Node</span></a>
   </div>
 </li>
@@ -679,22 +680,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#tutorialsettings.py" id="toc-tutorialsettings.py" class="nav-link" data-scroll-target="#tutorialsettings.py">tutorial/settings.py</a></li>
+  <li><a href="#snippetsmodel.py" id="toc-snippetsmodel.py" class="nav-link" data-scroll-target="#snippetsmodel.py">snippets/model.py</a></li>
+  <li><a href="#snippetsurls.py" id="toc-snippetsurls.py" class="nav-link" data-scroll-target="#snippetsurls.py">snippets/urls.py</a></li>
+  <li><a href="#tut2urls.py" id="toc-tut2urls.py" class="nav-link" data-scroll-target="#tut2urls.py">tut2/urls.py</a></li>
+  <li><a href="#snippetsviews.py" id="toc-snippetsviews.py" class="nav-link" data-scroll-target="#snippetsviews.py">snippets/views.py</a></li>
+  <li><a href="#snippetsserializers.py" id="toc-snippetsserializers.py" class="nav-link" data-scroll-target="#snippetsserializers.py">snippets/serializers.py</a></li>
+  <li><a href="#snippetspermissions.pyt" id="toc-snippetspermissions.pyt" class="nav-link" data-scroll-target="#snippetspermissions.pyt">snippets/permissions.pyt</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/Back_end/Django/533_DRF_Tutorial.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Back_end/influx.html">Back End</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/models_design.html">Django</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/drf_tutorial.html">DRF Tutorial</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Webdevelopment Documentation</h1>
+<h1 class="title">DRF Tutorial</h1>
 </div>
 
 <div>
   <div class="description">
-    <a href="https://bthek1.github.io/webdevelopment_doc/">Webdevelopment Documentation</a>
+    DRF Tutorial
   </div>
 </div>
 
@@ -712,20 +719,219 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>This file will become your README and also the index of your documentation.</p>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install webdevelopment_doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> tut_drf2</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv env</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> env/bin/activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install django</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install djangorestframework</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install pygments  <span class="co"># We'll be using this for the code highlighting</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">django-admin</span> startproject tut2</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> tut2</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> manage.py startapp snippets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
-</div>
-</div>
+<section id="tutorialsettings.py" class="level2">
+<h2 class="anchored" data-anchor-id="tutorialsettings.py">tutorial/settings.py</h2>
+<blockquote class="blockquote">
+<p>edit</p>
+</blockquote>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">INSTALLED_APPS</span> = [</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="ex">...</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'rest_framework'</span><span class="ex">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'snippets'</span><span class="ex">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="ex">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>add</p>
+</blockquote>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">REST_FRAMEWORK</span> = {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'DEFAULT_PAGINATION_CLASS'</span><span class="ex">:</span> <span class="st">'rest_framework.pagination.PageNumberPagination'</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'PAGE_SIZE'</span><span class="ex">:</span> 10</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> manage.py makemigrations snippets</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> manage.py migrate snippets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="snippetsmodel.py" class="level2">
+<h2 class="anchored" data-anchor-id="snippetsmodel.py">snippets/model.py</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.db <span class="im">import</span> models</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pygments.lexers <span class="im">import</span> get_all_lexers</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pygments.styles <span class="im">import</span> get_all_styles</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pygments.lexers <span class="im">import</span> get_lexer_by_name</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pygments.formatters.html <span class="im">import</span> HtmlFormatter</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pygments <span class="im">import</span> highlight</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>LEXERS <span class="op">=</span> [item <span class="cf">for</span> item <span class="kw">in</span> get_all_lexers() <span class="cf">if</span> item[<span class="dv">1</span>]]</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>LANGUAGE_CHOICES <span class="op">=</span> <span class="bu">sorted</span>([(item[<span class="dv">1</span>][<span class="dv">0</span>], item[<span class="dv">0</span>]) <span class="cf">for</span> item <span class="kw">in</span> LEXERS])</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>STYLE_CHOICES <span class="op">=</span> <span class="bu">sorted</span>([(item, item) <span class="cf">for</span> item <span class="kw">in</span> get_all_styles()])</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Snippet(models.Model):</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    created <span class="op">=</span> models.DateTimeField(auto_now_add<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> models.CharField(max_length<span class="op">=</span><span class="dv">100</span>, blank<span class="op">=</span><span class="va">True</span>, default<span class="op">=</span><span class="st">''</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    code <span class="op">=</span> models.TextField()</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    linenos <span class="op">=</span> models.BooleanField(default<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    language <span class="op">=</span> models.CharField(choices<span class="op">=</span>LANGUAGE_CHOICES, default<span class="op">=</span><span class="st">'python'</span>, max_length<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    style <span class="op">=</span> models.CharField(choices<span class="op">=</span>STYLE_CHOICES, default<span class="op">=</span><span class="st">'friendly'</span>, max_length<span class="op">=</span><span class="dv">100</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    owner <span class="op">=</span> models.ForeignKey(<span class="st">'auth.User'</span>, related_name<span class="op">=</span><span class="st">'snippets'</span>, on_delete<span class="op">=</span>models.CASCADE)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    highlighted <span class="op">=</span> models.TextField()</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">class</span> Meta:</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        ordering <span class="op">=</span> [<span class="st">'created'</span>]</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> save(<span class="va">self</span>, <span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co">        Use the `pygments` library to create a highlighted HTML</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a><span class="co">        representation of the code snippet.</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        lexer <span class="op">=</span> get_lexer_by_name(<span class="va">self</span>.language)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>        linenos <span class="op">=</span> <span class="st">'table'</span> <span class="cf">if</span> <span class="va">self</span>.linenos <span class="cf">else</span> <span class="va">False</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>        options <span class="op">=</span> {<span class="st">'title'</span>: <span class="va">self</span>.title} <span class="cf">if</span> <span class="va">self</span>.title <span class="cf">else</span> {}</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>        formatter <span class="op">=</span> HtmlFormatter(style<span class="op">=</span><span class="va">self</span>.style, linenos<span class="op">=</span>linenos,</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>                                full<span class="op">=</span><span class="va">True</span>, <span class="op">**</span>options)</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.highlighted <span class="op">=</span> highlight(<span class="va">self</span>.code, lexer, formatter)</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>        <span class="bu">super</span>().save(<span class="op">*</span>args, <span class="op">**</span>kwargs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="snippetsurls.py" class="level2">
+<h2 class="anchored" data-anchor-id="snippetsurls.py">snippets/urls.py</h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.urls <span class="im">import</span> path</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.urlpatterns <span class="im">import</span> format_suffix_patterns</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> snippets <span class="im">import</span> views</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># API endpoints</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>urlpatterns <span class="op">=</span> format_suffix_patterns([</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">''</span>, views.api_root),</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'snippets/'</span>,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        views.SnippetList.as_view(),</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>        name<span class="op">=</span><span class="st">'snippet-list'</span>),</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'snippets/&lt;int:pk&gt;/'</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        views.SnippetDetail.as_view(),</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        name<span class="op">=</span><span class="st">'snippet-detail'</span>),</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'snippets/&lt;int:pk&gt;/highlight/'</span>,</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        views.SnippetHighlight.as_view(),</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        name<span class="op">=</span><span class="st">'snippet-highlight'</span>),</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'users/'</span>,</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        views.UserList.as_view(),</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        name<span class="op">=</span><span class="st">'user-list'</span>),</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'users/&lt;int:pk&gt;/'</span>,</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        views.UserDetail.as_view(),</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>        name<span class="op">=</span><span class="st">'user-detail'</span>)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tut2urls.py" class="level2">
+<h2 class="anchored" data-anchor-id="tut2urls.py">tut2/urls.py</h2>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.contrib <span class="im">import</span> admin</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.urls <span class="im">import</span> path, include</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>urlpatterns <span class="op">=</span> [</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'admin/'</span>, admin.site.urls),</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">''</span>, include(<span class="st">'snippets.urls'</span>)),</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>urlpatterns <span class="op">+=</span> [</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'api-auth/'</span>, include(<span class="st">'rest_framework.urls'</span>)),</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="snippetsviews.py" class="level2">
+<h2 class="anchored" data-anchor-id="snippetsviews.py">snippets/views.py</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> snippets.models <span class="im">import</span> Snippet</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> snippets.serializers <span class="im">import</span> SnippetSerializer</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework <span class="im">import</span> generics</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework <span class="im">import</span> permissions</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> snippets.permissions <span class="im">import</span> IsOwnerOrReadOnly</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SnippetList(generics.ListCreateAPIView):</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    permission_classes <span class="op">=</span> [permissions.IsAuthenticatedOrReadOnly,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>                      IsOwnerOrReadOnly]</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    queryset <span class="op">=</span> Snippet.objects.<span class="bu">all</span>()</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    serializer_class <span class="op">=</span> SnippetSerializer</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> perform_create(<span class="va">self</span>, serializer):</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        serializer.save(owner<span class="op">=</span><span class="va">self</span>.request.user)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SnippetDetail(generics.RetrieveUpdateDestroyAPIView):</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    permission_classes <span class="op">=</span> [permissions.IsAuthenticatedOrReadOnly,</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>                      IsOwnerOrReadOnly]</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    queryset <span class="op">=</span> Snippet.objects.<span class="bu">all</span>()</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    serializer_class <span class="op">=</span> SnippetSerializer</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.contrib.auth.models <span class="im">import</span> User</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> snippets.serializers <span class="im">import</span> UserSerializer</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> UserList(generics.ListAPIView):</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    queryset <span class="op">=</span> User.objects.<span class="bu">all</span>()</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    serializer_class <span class="op">=</span> UserSerializer</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> UserDetail(generics.RetrieveAPIView):</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    queryset <span class="op">=</span> User.objects.<span class="bu">all</span>()</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>    serializer_class <span class="op">=</span> UserSerializer</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.decorators <span class="im">import</span> api_view</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.response <span class="im">import</span> Response</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.reverse <span class="im">import</span> reverse</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a><span class="at">@api_view</span>([<span class="st">'GET'</span>])</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> api_root(request, <span class="bu">format</span><span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Response({</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>        <span class="st">'users'</span>: reverse(<span class="st">'user-list'</span>, request<span class="op">=</span>request, <span class="bu">format</span><span class="op">=</span><span class="bu">format</span>),</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>        <span class="st">'snippets'</span>: reverse(<span class="st">'snippet-list'</span>, request<span class="op">=</span>request, <span class="bu">format</span><span class="op">=</span><span class="bu">format</span>)</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework <span class="im">import</span> renderers</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SnippetHighlight(generics.GenericAPIView):</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>    queryset <span class="op">=</span> Snippet.objects.<span class="bu">all</span>()</span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>    renderer_classes <span class="op">=</span> [renderers.StaticHTMLRenderer]</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get(<span class="va">self</span>, request, <span class="op">*</span>args, <span class="op">**</span>kwargs):</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>        snippet <span class="op">=</span> <span class="va">self</span>.get_object()</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Response(snippet.highlighted)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="snippetsserializers.py" class="level2">
+<h2 class="anchored" data-anchor-id="snippetsserializers.py">snippets/serializers.py</h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework <span class="im">import</span> serializers</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> snippets.models <span class="im">import</span> Snippet, LANGUAGE_CHOICES, STYLE_CHOICES</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.contrib.auth.models <span class="im">import</span> User</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> SnippetSerializer(serializers.HyperlinkedModelSerializer):</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    owner <span class="op">=</span> serializers.ReadOnlyField(source<span class="op">=</span><span class="st">'owner.username'</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    highlight <span class="op">=</span> serializers.HyperlinkedIdentityField(view_name<span class="op">=</span><span class="st">'snippet-highlight'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'html'</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">class</span> Meta:</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> Snippet</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        fields <span class="op">=</span> [<span class="st">'url'</span>, <span class="st">'id'</span>, <span class="st">'highlight'</span>, <span class="st">'owner'</span>,</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>                  <span class="st">'title'</span>, <span class="st">'code'</span>, <span class="st">'linenos'</span>, <span class="st">'language'</span>, <span class="st">'style'</span>]</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> UserSerializer(serializers.HyperlinkedModelSerializer):</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    snippets <span class="op">=</span> serializers.HyperlinkedRelatedField(many<span class="op">=</span><span class="va">True</span>, view_name<span class="op">=</span><span class="st">'snippet-detail'</span>, read_only<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">class</span> Meta:</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>        model <span class="op">=</span> User</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>        fields <span class="op">=</span> [<span class="st">'url'</span>, <span class="st">'id'</span>, <span class="st">'username'</span>, <span class="st">'snippets'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="snippetspermissions.pyt" class="level2">
+<h2 class="anchored" data-anchor-id="snippetspermissions.pyt">snippets/permissions.pyt</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework <span class="im">import</span> permissions</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> IsOwnerOrReadOnly(permissions.BasePermission):</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Custom permission to only allow owners of an object to edit it.</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> has_object_permission(<span class="va">self</span>, request, view, obj):</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Read permissions are allowed to any request,</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># so we'll always allow GET, HEAD or OPTIONS requests.</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> request.method <span class="kw">in</span> permissions.SAFE_METHODS:</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Write permissions are only allowed to the owner of the snippet.</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> obj.owner <span class="op">==</span> request.user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -1288,10 +1494,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../Back_end/Django/drf_quickstart.html" class="pagination-link" aria-label="DRF Quickstart">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">DRF Quickstart</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git.html" class="pagination-link" aria-label="GIT">
-        <span class="nav-page-text">GIT</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Back_end/Django/rm_django_setup.html" class="pagination-link" aria-label="Django For Recovery Metrics">
+        <span class="nav-page-text">Django For Recovery Metrics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1304,7 +1513,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link active" href="../../index.html" aria-current="page">
 <p>Trademark</p>
 </a>
   </li>  
@@ -1319,12 +1528,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../../index.html">
 <p>Trademark</p>
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/Back_end/Django/533_DRF_Tutorial.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

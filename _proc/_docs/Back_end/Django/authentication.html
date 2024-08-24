@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Webdevelopment Documentation">
+<meta name="description" content="Django REST Framework (DRF) provides a robust and flexible authentication system to secure your API. Here’s an overview of everything you need to know about authentication in DRF:">
 
-<title>webdevelopment_doc - Webdevelopment Documentation</title>
+<title>webdevelopment_doc - Authentication</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,26 +58,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./git.html" rel="next">
-<link href="./favi.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Back_end/Django/permissions.html" rel="next">
+<link href="../../Back_end/Django/models_design.html" rel="prev">
+<link href="../../favi.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -106,14 +107,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta property="og:description" content="Webdevelopment Documentation">
-<meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="webdevelopment_doc - Authentication">
+<meta property="og:description" content="Django REST Framework (DRF) provides a robust and flexible authentication system to secure your API. Here’s an overview of everything you need to know about authentication in DRF:">
+<meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Back_end/Django/Logo.svg">
 <meta property="og:site_name" content="webdevelopment_doc">
-<meta name="twitter:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta name="twitter:description" content="Webdevelopment Documentation">
-<meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
+<meta name="twitter:title" content="webdevelopment_doc - Authentication">
+<meta name="twitter:description" content="Django REST Framework (DRF) provides a robust and flexible authentication system to secure your API. Here’s an overview of everything you need to know about authentication in DRF:">
+<meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Back_end/Django/Logo.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -124,8 +125,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Logo.svg" alt="Quarto logo." class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../Logo.svg" alt="Quarto logo." class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Webdevelopment Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Back_end/influx.html">Back End</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/models_design.html">Django</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/authentication.html">Authentication</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,79 +266,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Webdevelopment Documentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git.html" class="sidebar-item-text sidebar-link">
+  <a href="../../git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GIT</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github.html" class="sidebar-item-text sidebar-link">
+  <a href="../../github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Github</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Docker</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PIP and GIT release</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ssh&amp;vnc&amp;ftp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ssh&amp;vnc&amp;ftp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SSH, VNC and FTP</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prefect.html" class="sidebar-item-text sidebar-link">
+  <a href="../../prefect.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prefect</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wireshark.html" class="sidebar-item-text sidebar-link">
+  <a href="../../wireshark.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wireshark</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nookal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../nookal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nookal</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nginx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../nginx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nginx</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gunicorn.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gunicorn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gunicorn</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./makefile.html" class="sidebar-item-text sidebar-link">
+  <a href="../../makefile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Makefile</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linux_users.html" class="sidebar-item-text sidebar-link">
+  <a href="../../linux_users.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linux Users, Groups and Permissions</span></a>
   </div>
 </li>
@@ -352,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/influx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/influx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Influx</span></a>
   </div>
 </li>
@@ -367,19 +368,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/postgresql.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/postgresql.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PostgreSQL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/mysql_&amp;_mariadb.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/mysql_&amp;_mariadb.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MariaDB and MySQL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/sqlite.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/sqlite.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SQLite</span></a>
   </div>
 </li>
@@ -387,112 +388,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Django</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/models_design.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/models_design.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Model Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/authentication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/authentication.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Authentication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/permissions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/permissions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Permissions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/secrets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/secrets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Secrets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/serialization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/serialization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Serialization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/views.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/views.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Views</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/admin.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/admin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Admin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/custom_commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/custom_commands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom Commands</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/testing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/testing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/users.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/users.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/forms.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/forms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Forms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/django_basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/django_basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Django Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/django_x.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/django_x.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DjangoX</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_basic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_basic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Basic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_quickstart.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_quickstart.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Quickstart</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_tutorial.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_tutorial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Tutorial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/rm_django_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/rm_django_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Django For Recovery Metrics</span></a>
   </div>
 </li>
@@ -511,13 +512,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Cloud /oracle.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Cloud /oracle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Oracle</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Cloud /aws-amazon.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Cloud /aws-amazon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AMS - Amazon</span></a>
   </div>
 </li>
@@ -534,31 +535,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/venv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/venv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Venv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/pipenv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/pipenv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pipenv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/poetry.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/poetry.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poetry</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/conda.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/conda.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conda</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/direnv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/direnv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Direnv</span></a>
   </div>
 </li>
@@ -575,31 +576,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/streamlit.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/streamlit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Streamlit</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/gradio.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/gradio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gradio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/grafana.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/grafana.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grafana</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/html.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HTML</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/fasthtml.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/fasthtml.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fastHTML</span></a>
   </div>
 </li>
@@ -614,25 +615,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/flutter_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/flutter_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Flutter Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/widgets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/widgets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">App development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/dart.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/dart.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dart</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/riverpod.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/riverpod.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Riverpod</span></a>
   </div>
 </li>
@@ -649,19 +650,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/react.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/react.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">React + typescript</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/react_native.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/react_native.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">React-Native</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/node.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/node.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Node</span></a>
   </div>
 </li>
@@ -679,22 +680,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#built-in-authentication-classes" id="toc-built-in-authentication-classes" class="nav-link active" data-scroll-target="#built-in-authentication-classes">Built-in Authentication Classes</a></li>
+  <li><a href="#configure-settings" id="toc-configure-settings" class="nav-link" data-scroll-target="#configure-settings">Configure Settings</a></li>
+  <li><a href="#implement-authentication" id="toc-implement-authentication" class="nav-link" data-scroll-target="#implement-authentication">Implement Authentication</a>
+  <ul class="collapse">
+  <li><a href="#session-authentication" id="toc-session-authentication" class="nav-link" data-scroll-target="#session-authentication">Session Authentication</a></li>
+  <li><a href="#token-authentication" id="toc-token-authentication" class="nav-link" data-scroll-target="#token-authentication">Token Authentication</a></li>
+  </ul></li>
+  <li><a href="#custom-authentication" id="toc-custom-authentication" class="nav-link" data-scroll-target="#custom-authentication">Custom Authentication</a></li>
+  <li><a href="#permission-classes" id="toc-permission-classes" class="nav-link" data-scroll-target="#permission-classes">Permission Classes</a></li>
+  <li><a href="#using-authentication-and-permissions-together" id="toc-using-authentication-and-permissions-together" class="nav-link" data-scroll-target="#using-authentication-and-permissions-together">Using Authentication and Permissions Together</a></li>
+  <li><a href="#set-up-views-and-permissions" id="toc-set-up-views-and-permissions" class="nav-link" data-scroll-target="#set-up-views-and-permissions">Set Up Views and Permissions</a>
+  <ul class="collapse">
+  <li><a href="#views" id="toc-views" class="nav-link" data-scroll-target="#views">Views</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/Back_end/Django/02_Authentication.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Back_end/influx.html">Back End</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/models_design.html">Django</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/authentication.html">Authentication</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Webdevelopment Documentation</h1>
+<h1 class="title">Authentication</h1>
 </div>
 
 <div>
   <div class="description">
-    <a href="https://bthek1.github.io/webdevelopment_doc/">Webdevelopment Documentation</a>
+    Django REST Framework (DRF) provides a robust and flexible authentication system to secure your API. Here’s an overview of everything you need to know about authentication in DRF:
   </div>
 </div>
 
@@ -712,22 +725,144 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>This file will become your README and also the index of your documentation.</p>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install webdevelopment_doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="built-in-authentication-classes" class="level2">
+<h2 class="anchored" data-anchor-id="built-in-authentication-classes">Built-in Authentication Classes</h2>
+<p>DRF comes with several built-in authentication classes:</p>
+<ul>
+<li>BasicAuthentication: Uses HTTP Basic Authentication. It’s simple but not very secure as it sends credentials in plain text.</li>
+<li>SessionAuthentication: Uses Django’s session framework. It’s suitable for browser-based clients that have a CSRF token.</li>
+<li>TokenAuthentication: Uses token-based authentication. A token is provided to the client after the initial login, which must be included in the Authorization header of subsequent requests.</li>
+<li>RemoteUserAuthentication: Useful for integrating with existing authentication frameworks that rely on the REMOTE_USER environment variable.</li>
+<li>Custom Authentication: You can create custom authentication classes by subclassing BaseAuthentication.</li>
+</ul>
 </section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
-</div>
-</div>
+<section id="configure-settings" class="level2">
+<h2 class="anchored" data-anchor-id="configure-settings">Configure Settings</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># settings.py</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>REST_FRAMEWORK <span class="op">=</span> {</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'DEFAULT_AUTHENTICATION_CLASSES'</span>: [</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">'rest_framework.authentication.BasicAuthentication'</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">'rest_framework.authentication.SessionAuthentication'</span>,  <span class="co"># Use session authentication</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="st">'rest_framework.authentication.TokenAuthentication'</span>,    <span class="co"># Use token authentication</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Add other authentication classes as needed</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'DEFAULT_PERMISSION_CLASSES'</span>: [</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">'rest_framework.permissions.IsAuthenticated'</span>,  <span class="co"># Ensure authenticated users have access</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="implement-authentication" class="level2">
+<h2 class="anchored" data-anchor-id="implement-authentication">Implement Authentication</h2>
+<section id="session-authentication" class="level3">
+<h3 class="anchored" data-anchor-id="session-authentication">Session Authentication</h3>
+<blockquote class="blockquote">
+<p>For session authentication, ensure you have ‘rest_framework.authentication.SessionAuthentication’ in your DEFAULT_AUTHENTICATION_CLASSES. This relies on Django’s session framework and requires users to log in via the web interface or obtain a session cookie through a login view.</p>
+</blockquote>
+</section>
+<section id="token-authentication" class="level3">
+<h3 class="anchored" data-anchor-id="token-authentication">Token Authentication</h3>
+<p>For token authentication:</p>
+<ul>
+<li><p>Generate Tokens: Use Django’s Token model to generate tokens for users. You can create tokens manually via Django admin or automatically when a user is created.</p></li>
+<li><p>Include Token in Requests: Clients must include the token in the Authorization header of API requests:</p></li>
+</ul>
+<section id="install-the-package" class="level4">
+<h4 class="anchored" data-anchor-id="install-the-package">Install the package</h4>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install djangorestframework</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install djangorestframework-simplejwt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="add-rest_framework-and-rest_framework.authtoken-to-your-installed_apps" class="level4">
+<h4 class="anchored" data-anchor-id="add-rest_framework-and-rest_framework.authtoken-to-your-installed_apps">Add rest_framework and rest_framework.authtoken to your INSTALLED_APPS:</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>INSTALLED_APPS <span class="op">=</span> [</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    ...</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'rest_framework'</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'rest_framework.authtoken'</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="run-migrations-to-create-the-token-model" class="level4">
+<h4 class="anchored" data-anchor-id="run-migrations-to-create-the-token-model">Run migrations to create the token model</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>python manage.py migrate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="create-a-view-to-generate-tokens" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-view-to-generate-tokens">Create a view to generate tokens</h4>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.authtoken.views <span class="im">import</span> obtain_auth_token</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> django.urls <span class="im">import</span> path</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>urlpatterns <span class="op">=</span> [</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    path(<span class="st">'api-token-auth/'</span>, obtain_auth_token, name<span class="op">=</span><span class="st">'api_token_auth'</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="use-tokens-in-your-api-requests" class="level4">
+<h4 class="anchored" data-anchor-id="use-tokens-in-your-api-requests">Use tokens in your API requests</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Authorization:</span> Token <span class="op">&lt;</span>your_token_key<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>DRF provides a built-in view (ObtainAuthToken) to obtain tokens via POST requests to /api/token/.</p>
+</section>
+</section>
+</section>
+<section id="custom-authentication" class="level2">
+<h2 class="anchored" data-anchor-id="custom-authentication">Custom Authentication</h2>
+<blockquote class="blockquote">
+<p>You can implement custom authentication by subclassing <code>BaseAuthentication</code> and overriding the <code>authenticate</code> method.</p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.authentication <span class="im">import</span> BaseAuthentication</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.exceptions <span class="im">import</span> AuthenticationFailed</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CustomAuthentication(BaseAuthentication):</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> authenticate(<span class="va">self</span>, request):</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        auth <span class="op">=</span> request.headers.get(<span class="st">'Authorization'</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> auth:</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> auth <span class="op">!=</span> <span class="st">'expected_token'</span>:</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> AuthenticationFailed(<span class="st">'Invalid token'</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> (<span class="va">None</span>, <span class="va">None</span>)  <span class="co"># Return a tuple of (user, auth)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="permission-classes" class="level2">
+<h2 class="anchored" data-anchor-id="permission-classes">Permission Classes</h2>
+<blockquote class="blockquote">
+<p>In addition to authentication, you need to handle permissions. DRF provides several built-in permission classes like <code>IsAuthenticated</code>, <code>IsAdminUser</code>, and <code>IsAuthenticatedOrReadOnly</code>. You can also create custom permission classes by subclassing <code>BasePermission</code>.</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.permissions <span class="im">import</span> BasePermission</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> IsOwner(BasePermission):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> has_object_permission(<span class="va">self</span>, request, view, obj):</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> obj.owner <span class="op">==</span> request.user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="using-authentication-and-permissions-together" class="level2">
+<h2 class="anchored" data-anchor-id="using-authentication-and-permissions-together">Using Authentication and Permissions Together</h2>
+<blockquote class="blockquote">
+<p>You typically use both authentication and permissions in your views or viewsets.</p>
+</blockquote>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.views <span class="im">import</span> APIView</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.permissions <span class="im">import</span> IsAuthenticated</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyView(APIView):</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    authentication_classes <span class="op">=</span> [TokenAuthentication]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    permission_classes <span class="op">=</span> [IsAuthenticated]</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get(<span class="va">self</span>, request):</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Response({<span class="st">'message'</span>: <span class="st">'Hello, world!'</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="set-up-views-and-permissions" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-views-and-permissions">Set Up Views and Permissions</h2>
+<section id="views" class="level3">
+<h3 class="anchored" data-anchor-id="views">Views</h3>
+<blockquote class="blockquote">
+<p>Define views using DRF’s APIView, ViewSet, or <span class="citation" data-cites="api_view">@api_view</span> decorator, and apply authentication requirements:</p>
+</blockquote>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.views <span class="im">import</span> APIView</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.response <span class="im">import</span> Response</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.permissions <span class="im">import</span> IsAuthenticated</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> ExampleView(APIView):</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    permission_classes <span class="op">=</span> [IsAuthenticated]  <span class="co"># Requires authenticated access</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get(<span class="va">self</span>, request):</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        content <span class="op">=</span> {<span class="st">'message'</span>: <span class="st">'Hello, World!'</span>}</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Response(content)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -1288,10 +1423,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../Back_end/Django/models_design.html" class="pagination-link" aria-label="Model Design">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Model Design</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git.html" class="pagination-link" aria-label="GIT">
-        <span class="nav-page-text">GIT</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Back_end/Django/permissions.html" class="pagination-link" aria-label="Permissions">
+        <span class="nav-page-text">Permissions</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1304,7 +1442,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link active" href="../../index.html" aria-current="page">
 <p>Trademark</p>
 </a>
   </li>  
@@ -1319,12 +1457,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../../index.html">
 <p>Trademark</p>
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/Back_end/Django/02_Authentication.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

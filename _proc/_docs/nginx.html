@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Webdevelopment Documentation">
+<meta name="description" content="high performance web server and a reverse proxy server">
 
-<title>webdevelopment_doc - Webdevelopment Documentation</title>
+<title>webdevelopment_doc - Nginx</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,7 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./git.html" rel="next">
+<link href="./gunicorn.html" rel="next">
+<link href="./nookal.html" rel="prev">
 <link href="./favi.svg" rel="icon" type="image/svg+xml">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -107,12 +108,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta property="og:description" content="Webdevelopment Documentation">
+<meta property="og:title" content="webdevelopment_doc - Nginx">
+<meta property="og:description" content="high performance web server and a reverse proxy server">
 <meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
 <meta property="og:site_name" content="webdevelopment_doc">
-<meta name="twitter:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta name="twitter:description" content="Webdevelopment Documentation">
+<meta name="twitter:title" content="webdevelopment_doc - Nginx">
+<meta name="twitter:description" content="high performance web server and a reverse proxy server">
 <meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Webdevelopment Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./nginx.html">Nginx</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,7 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Webdevelopment Documentation</span></a>
   </div>
 </li>
@@ -319,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nginx.html" class="sidebar-item-text sidebar-link">
+  <a href="./nginx.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Nginx</span></a>
   </div>
 </li>
@@ -679,22 +680,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#features" id="toc-features" class="nav-link active" data-scroll-target="#features">Features</a></li>
+  <li><a href="#why-use-nginx-with-django" id="toc-why-use-nginx-with-django" class="nav-link" data-scroll-target="#why-use-nginx-with-django">Why Use Nginx with Django?</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a>
+  <ul class="collapse">
+  <li><a href="#start" id="toc-start" class="nav-link" data-scroll-target="#start">Start</a></li>
+  <li><a href="#status" id="toc-status" class="nav-link" data-scroll-target="#status">Status</a></li>
+  <li><a href="#stop" id="toc-stop" class="nav-link" data-scroll-target="#stop">Stop</a></li>
+  <li><a href="#reload" id="toc-reload" class="nav-link" data-scroll-target="#reload">Reload</a></li>
+  </ul></li>
+  <li><a href="#default-html-file-in" id="toc-default-html-file-in" class="nav-link" data-scroll-target="#default-html-file-in">Default html file in</a></li>
+  <li><a href="#nginx" id="toc-nginx" class="nav-link" data-scroll-target="#nginx">Nginx</a>
+  <ul class="collapse">
+  <li><a href="#create-a-new-configuration-file-for-your-django-project-in-etcnginxsites-available" id="toc-create-a-new-configuration-file-for-your-django-project-in-etcnginxsites-available" class="nav-link" data-scroll-target="#create-a-new-configuration-file-for-your-django-project-in-etcnginxsites-available">Create a new configuration file for your Django project in /etc/nginx/sites-available/</a></li>
+  <li><a href="#add-the-following-basic-configuration" id="toc-add-the-following-basic-configuration" class="nav-link" data-scroll-target="#add-the-following-basic-configuration">Add the following basic configuration</a></li>
+  </ul></li>
+  <li><a href="#allow-http-port-to-device" id="toc-allow-http-port-to-device" class="nav-link" data-scroll-target="#allow-http-port-to-device">Allow http port to device</a>
+  <ul class="collapse">
+  <li><a href="#link-the-configuration-and-test-nginx" id="toc-link-the-configuration-and-test-nginx" class="nav-link" data-scroll-target="#link-the-configuration-and-test-nginx">Link the Configuration and Test Nginx</a></li>
+  </ul></li>
+  <li><a href="#test-the-nginx-configuration-for-syntax-errors" id="toc-test-the-nginx-configuration-for-syntax-errors" class="nav-link" data-scroll-target="#test-the-nginx-configuration-for-syntax-errors">Test the Nginx configuration for syntax errors</a>
+  <ul class="collapse">
+  <li><a href="#if-the-test-is-successful-reload-nginx" id="toc-if-the-test-is-successful-reload-nginx" class="nav-link" data-scroll-target="#if-the-test-is-successful-reload-nginx">If the test is successful, reload Nginx</a></li>
+  </ul></li>
+  <li><a href="#serving-static-and-media-files" id="toc-serving-static-and-media-files" class="nav-link" data-scroll-target="#serving-static-and-media-files">Serving Static and Media Files</a>
+  <ul class="collapse">
+  <li><a href="#in-settings.py" id="toc-in-settings.py" class="nav-link" data-scroll-target="#in-settings.py">In <code>settings.py</code></a></li>
+  <li><a href="#run-the-command-to-collect-static-files" id="toc-run-the-command-to-collect-static-files" class="nav-link" data-scroll-target="#run-the-command-to-collect-static-files">Run the command to collect static files</a></li>
+  </ul></li>
+  <li><a href="#django-using-gunicorn-with-nginx" id="toc-django-using-gunicorn-with-nginx" class="nav-link" data-scroll-target="#django-using-gunicorn-with-nginx">Django: Using Gunicorn with Nginx</a>
+  <ul class="collapse">
+  <li><a href="#securing-your-django-project-with-nginx" id="toc-securing-your-django-project-with-nginx" class="nav-link" data-scroll-target="#securing-your-django-project-with-nginx">Securing Your Django Project with Nginx</a></li>
+  <li><a href="#optimizing-performance" id="toc-optimizing-performance" class="nav-link" data-scroll-target="#optimizing-performance">Optimizing Performance</a></li>
+  <li><a href="#monitoring-and-logging" id="toc-monitoring-and-logging" class="nav-link" data-scroll-target="#monitoring-and-logging">Monitoring and Logging</a></li>
+  <li><a href="#serving-static-and-media-files-1" id="toc-serving-static-and-media-files-1" class="nav-link" data-scroll-target="#serving-static-and-media-files-1">Serving Static and Media Files</a></li>
+  <li><a href="#link-the-site" id="toc-link-the-site" class="nav-link" data-scroll-target="#link-the-site">Link the site</a></li>
+  <li><a href="#allow-http-port-to-device-1" id="toc-allow-http-port-to-device-1" class="nav-link" data-scroll-target="#allow-http-port-to-device-1">Allow http port to device</a></li>
+  <li><a href="#edit-nginx.conf" id="toc-edit-nginx.conf" class="nav-link" data-scroll-target="#edit-nginx.conf">Edit nginx.conf</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/10_Nginx.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Webdevelopment Documentation</h1>
+<h1 class="title">Nginx</h1>
 </div>
 
 <div>
   <div class="description">
-    <a href="https://bthek1.github.io/webdevelopment_doc/">Webdevelopment Documentation</a>
+    high performance web server and a reverse proxy server
   </div>
 </div>
 
@@ -712,22 +749,300 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>This file will become your README and also the index of your documentation.</p>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install webdevelopment_doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<ul>
+<li>Admin site</li>
+<li>Object-relational mapper</li>
+<li>Authentication</li>
+<li>Caching</li>
+</ul>
+<p><code>HTTP</code> : Hypertext Transfer Protocol</p>
 </section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
-</div>
-</div>
+<section id="why-use-nginx-with-django" class="level2">
+<h2 class="anchored" data-anchor-id="why-use-nginx-with-django">Why Use Nginx with Django?</h2>
+<ul>
+<li>Reverse Proxy: Nginx can serve as a reverse proxy, forwarding client requests to a Django application server and serving responses back to the client.</li>
+<li>Static and Media File Handling: Nginx can serve static and media files more efficiently than Django’s built-in server.</li>
+<li>Load Balancing: Nginx can distribute incoming traffic across multiple instances of your Django application.</li>
+<li>Security and Performance: Nginx can handle SSL/TLS termination, provide rate limiting, and improve overall performance through caching and compression.</li>
+</ul>
+</section>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install nginx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="start" class="level3">
+<h3 class="anchored" data-anchor-id="start">Start</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl start nginx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="status" class="level3">
+<h3 class="anchored" data-anchor-id="status">Status</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl status nginx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="stop" class="level3">
+<h3 class="anchored" data-anchor-id="stop">Stop</h3>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl stop nginx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="reload" class="level3">
+<h3 class="anchored" data-anchor-id="reload">Reload</h3>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nginx <span class="at">-s</span> reload</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="default-html-file-in" class="level2">
+<h2 class="anchored" data-anchor-id="default-html-file-in">Default html file in</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /var/www/html </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="nginx" class="level2">
+<h2 class="anchored" data-anchor-id="nginx">Nginx</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /etc/nginx/sites-enables</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="create-a-new-configuration-file-for-your-django-project-in-etcnginxsites-available" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-new-configuration-file-for-your-django-project-in-etcnginxsites-available">Create a new configuration file for your Django project in /etc/nginx/sites-available/</h3>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/nginx/sites-available/myproject</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="add-the-following-basic-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="add-the-following-basic-configuration">Add the following basic configuration</h3>
+<pre class="nginx"><code>server {
+    listen 80;
+    server_name example.com www.example.com;  # Replace with your domain
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /path/to/your/static/files;  # Replace with your static files path
+    }
+
+    location /media/ {
+        root /path/to/your/media/files;  # Replace with your media files path
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/path/to/your/project.sock;  # Replace with your socket file path
+    }
+}
+</code></pre>
+<ul>
+<li><code>server_name</code>: Replace with your domain name.</li>
+<li><code>root</code>: Set the paths to your static and media files.</li>
+<li><code>proxy_pass</code>: This should point to your application server (e.g., Gunicorn) using a Unix socket or an IP address and port.</li>
+</ul>
+</section>
+</section>
+<section id="allow-http-port-to-device" class="level2">
+<h2 class="anchored" data-anchor-id="allow-http-port-to-device">Allow http port to device</h2>
+<blockquote class="blockquote">
+<p>Oracle</p>
+</blockquote>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> iptables <span class="at">-I</span> INPUT 6 <span class="at">-m</span> state <span class="at">--state</span> NEW <span class="at">-p</span> tcp <span class="at">--dport</span> 80 <span class="at">-j</span> ACCEPT</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="link-the-configuration-and-test-nginx" class="level3">
+<h3 class="anchored" data-anchor-id="link-the-configuration-and-test-nginx">Link the Configuration and Test Nginx</h3>
+<blockquote class="blockquote">
+<p>Link your configuration file to the sites-enabled directory</p>
+</blockquote>
+<div class="sourceCode" id="cb11"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-s</span> /etc/nginx/sites-available/<span class="op">&lt;</span>myproject<span class="op">&gt;</span> /etc/nginx/sites-enabled</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="test-the-nginx-configuration-for-syntax-errors" class="level2">
+<h2 class="anchored" data-anchor-id="test-the-nginx-configuration-for-syntax-errors">Test the Nginx configuration for syntax errors</h2>
+<div class="sourceCode" id="cb12"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nginx <span class="at">-t</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="if-the-test-is-successful-reload-nginx" class="level3">
+<h3 class="anchored" data-anchor-id="if-the-test-is-successful-reload-nginx">If the test is successful, reload Nginx</h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl reload nginx</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="serving-static-and-media-files" class="level2">
+<h2 class="anchored" data-anchor-id="serving-static-and-media-files">Serving Static and Media Files</h2>
+<blockquote class="blockquote">
+<p>For production, Django doesn’t serve static files; Nginx handles them. Set up Django to collect all static files into a single directory</p>
+</blockquote>
+<section id="in-settings.py" class="level3">
+<h3 class="anchored" data-anchor-id="in-settings.py">In <code>settings.py</code></h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>STATIC_URL <span class="op">=</span> <span class="st">'/static/'</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>STATIC_ROOT <span class="op">=</span> <span class="st">'/path/to/your/static/files'</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>MEDIA_URL <span class="op">=</span> <span class="st">'/media/'</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>MEDIA_ROOT <span class="op">=</span> <span class="st">'/path/to/your/media/files'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="run-the-command-to-collect-static-files" class="level3">
+<h3 class="anchored" data-anchor-id="run-the-command-to-collect-static-files">Run the command to collect static files</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> manage.py collectstatic</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="django-using-gunicorn-with-nginx" class="level2">
+<h2 class="anchored" data-anchor-id="django-using-gunicorn-with-nginx">Django: Using Gunicorn with Nginx</h2>
+<blockquote class="blockquote">
+<p>Gunicorn is a WSGI HTTP server for Python applications. To use Gunicorn with Nginx</p>
+</blockquote>
+<section id="securing-your-django-project-with-nginx" class="level3">
+<h3 class="anchored" data-anchor-id="securing-your-django-project-with-nginx">Securing Your Django Project with Nginx</h3>
+<ul>
+<li><p>SSL/TLS: Use Let’s Encrypt to obtain a free SSL/TLS certificate and configure Nginx to use HTTPS.</p></li>
+<li><p>Security Headers: Add security headers like Content-Security-Policy, X-Content-Type-Options, X-Frame-Options, and X-XSS-Protection to enhance security.</p></li>
+<li><p>Rate Limiting: Implement rate limiting to protect your site from brute force attacks.</p></li>
+</ul>
+</section>
+<section id="optimizing-performance" class="level3">
+<h3 class="anchored" data-anchor-id="optimizing-performance">Optimizing Performance</h3>
+<ul>
+<li>Caching: Use Nginx to cache static files and other resources.</li>
+<li>Compression: Enable gzip compression in Nginx to reduce the size of responses.</li>
+</ul>
+</section>
+<section id="monitoring-and-logging" class="level3">
+<h3 class="anchored" data-anchor-id="monitoring-and-logging">Monitoring and Logging</h3>
+<blockquote class="blockquote">
+<p>Nginx provides extensive logging capabilities. Configure access and error logs for monitoring</p>
+</blockquote>
+<pre class="nginx"><code>access_log /var/log/nginx/myproject_access.log;
+error_log /var/log/nginx/myproject_error.log;
+</code></pre>
+<blockquote class="blockquote">
+<p>Using Nginx with Django can significantly improve your project’s performance, scalability, and security. Make sure to test your configuration thoroughly before deploying it to production.</p>
+</blockquote>
+</section>
+<section id="serving-static-and-media-files-1" class="level3">
+<h3 class="anchored" data-anchor-id="serving-static-and-media-files-1">Serving Static and Media Files</h3>
+<blockquote class="blockquote">
+<p>Gunicorn does not serve static or media files in production. Use a web server like Nginx to handle static files and reverse proxy requests to Gunicorn</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Example Nginx configuration in <code>/etc/nginx/sites-available/todo</code></p>
+</blockquote>
+<pre class="nginx"><code>server {
+    listen 80;
+    server_name your_domain_or_IP;
+
+    location / {
+        proxy_pass http://unix:/path/to/your/project/gunicorn.sock;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /static/ {
+        alias /path/to/your/project/static/;
+    }
+
+    location /media/ {
+        alias /path/to/your/project/media/;
+    }
+}
+</code></pre>
+<blockquote class="blockquote">
+<p>Example Django Project</p>
+</blockquote>
+<pre class="nginx"><code>server {
+    listen 80;
+    server_name 172.22.251.200;
+
+    location /static/ {
+        alias /home/ben-24/Example_project/django_todo_postgres/static/;
+    }
+
+    location / {
+        # include proxy_params;
+        proxy_pass http://unix:/home/ben-24/Example_project/django_todo_postgres/gunicorn.sock;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
+</code></pre>
+</section>
+<section id="link-the-site" class="level3">
+<h3 class="anchored" data-anchor-id="link-the-site">Link the site</h3>
+<div class="sourceCode" id="cb19"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-s</span> /etc/nginx/sites-available/todo /etc/nginx/sites-enabled</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="allow-http-port-to-device-1" class="level3">
+<h3 class="anchored" data-anchor-id="allow-http-port-to-device-1">Allow http port to device</h3>
+<blockquote class="blockquote">
+<p>Oracle</p>
+</blockquote>
+<div class="sourceCode" id="cb20"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> iptables <span class="at">-I</span> INPUT 6 <span class="at">-m</span> state <span class="at">--state</span> NEW <span class="at">-p</span> tcp <span class="at">--dport</span> 80 <span class="at">-j</span> ACCEPT</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="edit-nginx.conf" class="level3">
+<h3 class="anchored" data-anchor-id="edit-nginx.conf">Edit nginx.conf</h3>
+<blockquote class="blockquote">
+<p>in `/etc/nginx/nginx.conf</p>
+</blockquote>
+<div class="sourceCode" id="cb21"><pre class="sourceCode conf code-with-copy"><code class="sourceCode toml"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="dt">user</span> <span class="dt">root</span><span class="er">;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="dt">worker_processes</span> <span class="dt">auto</span><span class="er">;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="dt">pid</span> <span class="er">/</span><span class="dt">run</span><span class="er">/</span><span class="dt">nginx.pid</span><span class="er">;</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="dt">error_log</span> <span class="er">/</span><span class="dt">var</span><span class="er">/</span><span class="dt">log</span><span class="er">/</span><span class="dt">nginx</span><span class="er">/</span><span class="dt">error.log</span><span class="er">;</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="dt">include</span> <span class="er">/</span><span class="dt">etc</span><span class="er">/</span><span class="dt">nginx</span><span class="er">/</span><span class="dt">modules-enabled</span><span class="er">/*</span><span class="dt">.conf</span><span class="er">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre class="nginx"><code>## main
+worker_processes auto;
+
+error_log /path/to/error error;
 
 
+http {
+    server {
+        listen 80;
+        server_name mydomain.com ww.mydomain.com;
+
+        location / {
+            root /path/to/folder;
+            index index.html
+        }
+    
+    }
+
+}</code></pre>
+<p>```nginx http { server { listen 443 ssl; server_name mydomain.com www.mydomain.com;</p>
+<pre><code>    location / {
+        root /path/to/folder;
+        index index.html
+    }
+
+    ssl_sertification /path/to/certificate;
+    ssl_certification_key /path/to/key;
+
+server {
+
+
+    listen 80;
+    server_name mydomain.com www.mydomain.com;
+
+    return 301 https://$server_name$request_uri;
+
+}</code></pre>
+<p>}</p>
+<p>```nginx ## main worker_processes auto;</p>
+<p>error_log /path/to/error error;</p>
+<p>http { server { listen 443 ssl; server_name mydomain.com www.mydomain.com;</p>
+<pre><code>    location /static {
+        alias /path/to/root;
+    }
+
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    }
+
+
+
+
+    ssl_sertification /path/to/certificate;
+    ssl_certification_key /path/to/key;
+
+
+server {
+    listen 80;
+    server_name mydomain.com www.mydomain.com;
+
+    return 301 https://$server_name$request_uri;
+
+}</code></pre>
+<p>}</p>
+
+
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -1288,10 +1603,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./nookal.html" class="pagination-link" aria-label="Nookal">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Nookal</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git.html" class="pagination-link" aria-label="GIT">
-        <span class="nav-page-text">GIT</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./gunicorn.html" class="pagination-link" aria-label="Gunicorn">
+        <span class="nav-page-text">Gunicorn</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1324,7 +1642,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/10_Nginx.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

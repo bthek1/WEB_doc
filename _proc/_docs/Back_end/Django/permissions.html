@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Webdevelopment Documentation">
+<meta name="description" content="Django REST Framework (DRF) provides a comprehensive system for handling permissions to ensure that API endpoints are accessed and modified only by users with the appropriate rights.">
 
-<title>webdevelopment_doc - Webdevelopment Documentation</title>
+<title>webdevelopment_doc - Permissions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,26 +58,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./git.html" rel="next">
-<link href="./favi.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Back_end/Django/secrets.html" rel="next">
+<link href="../../Back_end/Django/authentication.html" rel="prev">
+<link href="../../favi.svg" rel="icon" type="image/svg+xml">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -106,14 +107,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta property="og:description" content="Webdevelopment Documentation">
-<meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="webdevelopment_doc - Permissions">
+<meta property="og:description" content="Django REST Framework (DRF) provides a comprehensive system for handling permissions to ensure that API endpoints are accessed and modified only by users with the appropriate rights.">
+<meta property="og:image" content="https://bthek1.github.io/webdevelopment_doc/Back_end/Django/Logo.svg">
 <meta property="og:site_name" content="webdevelopment_doc">
-<meta name="twitter:title" content="webdevelopment_doc - Webdevelopment Documentation">
-<meta name="twitter:description" content="Webdevelopment Documentation">
-<meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Logo.svg">
+<meta name="twitter:title" content="webdevelopment_doc - Permissions">
+<meta name="twitter:description" content="Django REST Framework (DRF) provides a comprehensive system for handling permissions to ensure that API endpoints are accessed and modified only by users with the appropriate rights.">
+<meta name="twitter:image" content="https://bthek1.github.io/webdevelopment_doc/Back_end/Django/Logo.svg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -124,8 +125,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./Logo.svg" alt="Quarto logo." class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../Logo.svg" alt="Quarto logo." class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -251,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Webdevelopment Documentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Back_end/influx.html">Back End</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/models_design.html">Django</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/permissions.html">Permissions</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -265,79 +266,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Webdevelopment Documentation</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./git.html" class="sidebar-item-text sidebar-link">
+  <a href="../../git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">GIT</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./github.html" class="sidebar-item-text sidebar-link">
+  <a href="../../github.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Github</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./docker.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docker.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Docker</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
+  <a href="../../pip&amp;git_release.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PIP and GIT release</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ssh&amp;vnc&amp;ftp.html" class="sidebar-item-text sidebar-link">
+  <a href="../../ssh&amp;vnc&amp;ftp.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SSH, VNC and FTP</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./prefect.html" class="sidebar-item-text sidebar-link">
+  <a href="../../prefect.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Prefect</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./wireshark.html" class="sidebar-item-text sidebar-link">
+  <a href="../../wireshark.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Wireshark</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nookal.html" class="sidebar-item-text sidebar-link">
+  <a href="../../nookal.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nookal</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nginx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../nginx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nginx</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./gunicorn.html" class="sidebar-item-text sidebar-link">
+  <a href="../../gunicorn.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gunicorn</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./makefile.html" class="sidebar-item-text sidebar-link">
+  <a href="../../makefile.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Makefile</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./linux_users.html" class="sidebar-item-text sidebar-link">
+  <a href="../../linux_users.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Linux Users, Groups and Permissions</span></a>
   </div>
 </li>
@@ -352,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/influx.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/influx.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Influx</span></a>
   </div>
 </li>
@@ -367,19 +368,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/postgresql.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/postgresql.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PostgreSQL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/mysql_&amp;_mariadb.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/mysql_&amp;_mariadb.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">MariaDB and MySQL</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Databases/sqlite.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Databases/sqlite.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SQLite</span></a>
   </div>
 </li>
@@ -387,112 +388,112 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Django</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/models_design.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/models_design.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Model Design</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/authentication.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/authentication.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Authentication</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/permissions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/permissions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Permissions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/secrets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/secrets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Secrets</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/serialization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/serialization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Serialization</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/views.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/views.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Views</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/admin.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/admin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Admin</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/custom_commands.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/custom_commands.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Custom Commands</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/testing.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/testing.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Testing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/users.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/users.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">User Models</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/forms.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/forms.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Forms</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/django_basics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/django_basics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Django Basics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/django_x.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/django_x.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DjangoX</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_basic.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_basic.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Basic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_quickstart.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_quickstart.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Quickstart</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/drf_tutorial.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/drf_tutorial.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DRF Tutorial</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Back_end/Django/rm_django_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Back_end/Django/rm_django_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Django For Recovery Metrics</span></a>
   </div>
 </li>
@@ -511,13 +512,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Cloud /oracle.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Cloud /oracle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Oracle</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Cloud /aws-amazon.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Cloud /aws-amazon.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">AMS - Amazon</span></a>
   </div>
 </li>
@@ -534,31 +535,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/venv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/venv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Venv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/pipenv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/pipenv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pipenv</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/poetry.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/poetry.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Poetry</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/conda.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/conda.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conda</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Environments/direnv.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Environments/direnv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Direnv</span></a>
   </div>
 </li>
@@ -575,31 +576,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/streamlit.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/streamlit.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Streamlit</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/gradio.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/gradio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Gradio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/grafana.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/grafana.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grafana</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/html.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/html.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">HTML</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/fasthtml.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/fasthtml.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">fastHTML</span></a>
   </div>
 </li>
@@ -614,25 +615,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/flutter_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/flutter_setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Flutter Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/widgets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/widgets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">App development</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/dart.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/dart.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dart</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/Flutter/riverpod.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/Flutter/riverpod.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Riverpod</span></a>
   </div>
 </li>
@@ -649,19 +650,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/react.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/react.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">React + typescript</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/react_native.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/react_native.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">React-Native</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Front_end/React/node.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Front_end/React/node.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Node</span></a>
   </div>
 </li>
@@ -679,22 +680,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#install" id="toc-install" class="nav-link active" data-scroll-target="#install">Install</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to use</a></li>
+  <li><a href="#built-in-permission-classes" id="toc-built-in-permission-classes" class="nav-link active" data-scroll-target="#built-in-permission-classes">Built-in Permission Classes</a></li>
+  <li><a href="#using-permission-classes" id="toc-using-permission-classes" class="nav-link" data-scroll-target="#using-permission-classes">Using Permission Classes</a>
+  <ul class="collapse">
+  <li><a href="#view-level" id="toc-view-level" class="nav-link" data-scroll-target="#view-level">View Level</a></li>
+  <li><a href="#global-level" id="toc-global-level" class="nav-link" data-scroll-target="#global-level">Global Level</a></li>
+  </ul></li>
+  <li><a href="#custom-permission-classes" id="toc-custom-permission-classes" class="nav-link" data-scroll-target="#custom-permission-classes">Custom Permission Classes</a></li>
+  <li><a href="#permission-methods" id="toc-permission-methods" class="nav-link" data-scroll-target="#permission-methods">Permission Methods</a></li>
+  <li><a href="#combining-permissions" id="toc-combining-permissions" class="nav-link" data-scroll-target="#combining-permissions">Combining Permissions</a></li>
+  <li><a href="#third-party-permissions" id="toc-third-party-permissions" class="nav-link" data-scroll-target="#third-party-permissions">Third-Party Permissions</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  <li><a href="#advanced-permissions" id="toc-advanced-permissions" class="nav-link" data-scroll-target="#advanced-permissions">Advanced Permissions</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/Back_end/Django/03_Permissions.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../Back_end/influx.html">Back End</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/models_design.html">Django</a></li><li class="breadcrumb-item"><a href="../../Back_end/Django/permissions.html">Permissions</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Webdevelopment Documentation</h1>
+<h1 class="title">Permissions</h1>
 </div>
 
 <div>
   <div class="description">
-    <a href="https://bthek1.github.io/webdevelopment_doc/">Webdevelopment Documentation</a>
+    Django REST Framework (DRF) provides a comprehensive system for handling permissions to ensure that API endpoints are accessed and modified only by users with the appropriate rights.
   </div>
 </div>
 
@@ -712,20 +723,113 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
-<p>This file will become your README and also the index of your documentation.</p>
-<section id="install" class="level2">
-<h2 class="anchored" data-anchor-id="install">Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install webdevelopment_doc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="built-in-permission-classes" class="level2">
+<h2 class="anchored" data-anchor-id="built-in-permission-classes">Built-in Permission Classes</h2>
+<blockquote class="blockquote">
+<p>DRF comes with several built-in permission classes that can be used to restrict access to your API views:</p>
+</blockquote>
+<ul>
+<li>AllowAny: Grants access to any user, whether authenticated or not. It is the default permission class.</li>
+<li>IsAuthenticated: Grants access only to authenticated users.</li>
+<li>IsAdminUser: Grants access only to users with admin status.</li>
+<li>IsAuthenticatedOrReadOnly: Grants read-only access to unauthenticated users and full access to authenticated users.</li>
+</ul>
 </section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to use</h2>
-<p>Fill me in please! Don’t forget code examples:</p>
-<div id="cell-7" class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="op">+</span><span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<pre><code>2</code></pre>
-</div>
-</div>
+<section id="using-permission-classes" class="level2">
+<h2 class="anchored" data-anchor-id="using-permission-classes">Using Permission Classes</h2>
+<blockquote class="blockquote">
+<p>You can set permission classes at the view level or globally in your settings.py file.</p>
+</blockquote>
+<section id="view-level" class="level3">
+<h3 class="anchored" data-anchor-id="view-level">View Level</h3>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.permissions <span class="im">import</span> IsAuthenticated</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.views <span class="im">import</span> APIView</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyView(APIView):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    permission_classes <span class="op">=</span> [IsAuthenticated]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get(<span class="va">self</span>, request):</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Response({<span class="st">"message"</span>: <span class="st">"Hello, world!"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="global-level" class="level3">
+<h3 class="anchored" data-anchor-id="global-level">Global Level</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># settings.py</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>REST_FRAMEWORK <span class="op">=</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'DEFAULT_PERMISSION_CLASSES'</span>: [</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">'rest_framework.permissions.IsAuthenticated'</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="custom-permission-classes" class="level2">
+<h2 class="anchored" data-anchor-id="custom-permission-classes">Custom Permission Classes</h2>
+<blockquote class="blockquote">
+<p>DRF allows you to define custom permission classes by subclassing BasePermission. Custom permissions can be used to implement more complex logic.</p>
+</blockquote>
+<section id="example-custom-permission-class" class="level4">
+<h4 class="anchored" data-anchor-id="example-custom-permission-class">Example: Custom Permission Class</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.permissions <span class="im">import</span> BasePermission</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> IsOwner(BasePermission):</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> has_object_permission(<span class="va">self</span>, request, view, obj):</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> obj.owner <span class="op">==</span> request.user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="permission-methods" class="level2">
+<h2 class="anchored" data-anchor-id="permission-methods">Permission Methods</h2>
+<p>Custom permissions override two main methods: - <code>has_permission(self, request, view)</code>: Checks permissions at the view level. - <code>has_object_permission(self, request, view, obj)</code>: Checks permissions at the object level.</p>
+<section id="example-custom-permission-methods" class="level4">
+<h4 class="anchored" data-anchor-id="example-custom-permission-methods">Example: Custom Permission Methods</h4>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> IsOwner(BasePermission):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> has_permission(<span class="va">self</span>, request, view):</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Custom logic for view level permission</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> has_object_permission(<span class="va">self</span>, request, view, obj):</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Custom logic for object level permission</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> obj.owner <span class="op">==</span> request.user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="combining-permissions" class="level2">
+<h2 class="anchored" data-anchor-id="combining-permissions">Combining Permissions</h2>
+<blockquote class="blockquote">
+<p>You can combine multiple permission classes to apply multiple layers of permission checks.</p>
+</blockquote>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> rest_framework.permissions <span class="im">import</span> IsAuthenticated, IsAdminUser</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MyView(APIView):</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    permission_classes <span class="op">=</span> [IsAuthenticated, IsAdminUser]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get(<span class="va">self</span>, request):</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Response({<span class="st">"message"</span>: <span class="st">"Hello, world!"</span>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="third-party-permissions" class="level2">
+<h2 class="anchored" data-anchor-id="third-party-permissions">Third-Party Permissions</h2>
+<p>DRF integrates with several third-party libraries to extend the default permissions system. For example:</p>
+<ul>
+<li>django-guardian: Provides per-object permissions.</li>
+<li>django-rules: Allows for rule-based permissions.</li>
+</ul>
+</section>
+<section id="best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
+<ol type="1">
+<li>Least Privilege Principle: Only give users the minimum permissions they need to perform their tasks.</li>
+<li>Reuse Custom Permissions: Create custom permissions for reusable and consistent permission logic across views.</li>
+<li>Object-Level Permissions: Use object-level permissions to fine-tune access control, especially for models with user-specific data.</li>
+</ol>
+</section>
+<section id="advanced-permissions" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-permissions">Advanced Permissions</h2>
+<blockquote class="blockquote">
+<p>For advanced use cases, you can create permissions that depend on request data, view arguments, or any other contextual information.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Example: Permission Based on Query Parameter</p>
+</blockquote>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> QueryParameterPermission(BasePermission):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> has_permission(<span class="va">self</span>, request, view):</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'allow'</span> <span class="kw">in</span> request.query_params</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 </section>
@@ -1288,10 +1392,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../../Back_end/Django/authentication.html" class="pagination-link" aria-label="Authentication">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Authentication</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./git.html" class="pagination-link" aria-label="GIT">
-        <span class="nav-page-text">GIT</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../Back_end/Django/secrets.html" class="pagination-link" aria-label="Secrets">
+        <span class="nav-page-text">Secrets</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1304,7 +1411,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link active" href="../../index.html" aria-current="page">
 <p>Trademark</p>
 </a>
   </li>  
@@ -1319,12 +1426,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="../../index.html">
 <p>Trademark</p>
 </a>
   </li>  
 </ul>
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/index.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.dev/bthek1/webdevelopment_doc/blob/main/Back_end/Django/03_Permissions.ipynb" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bthek1/webdevelopment_doc/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
