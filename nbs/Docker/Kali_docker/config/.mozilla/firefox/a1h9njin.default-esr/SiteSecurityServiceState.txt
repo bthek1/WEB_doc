@@ -1,0 +1,6 @@
+classify-client.services.mozilla.com:HSTS	0	19997	1759327350185,1,0
+firefox.settings.services.mozilla.com:HSTS	0	19997	1759327349981,1,0
+shavar.services.mozilla.com^firstPartyDomain=safebrowsing.86868755-6b82-4842-b301-72671a0db32e.mozilla:HSTS	0	19997	1759327350680,1,1
+location.services.mozilla.com:HSTS	0	19997	1759327349513,1,0
+www.exploit-db.com^partitionKey=%28http%2Cexploit-db.com%29:HSTS	0	19997	1790863361423,1,1
+normandy.cdn.mozilla.net:HSTS	0	19997	1759327349781,1,0
