@@ -164,4 +164,8 @@ cython_debug/
 .sesskey
 
 
+
+nbs/Docker/Firefox-docker/config
+nbs/Docker/Kali_docker/config
 nbs/Docker/Portainer_docker/portainer_data/
+nbs/Docker/Ubuntu_docker/data
